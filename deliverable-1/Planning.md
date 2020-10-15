@@ -2,7 +2,7 @@
 
 ## Product Details
  
-#### Q1: What are you planning to build?
+### Q1: What are you planning to build?
 
 **We are planning to build a geo-audio, real-time locating mobile application that provides natural, cultural, and historical information and anomalies of Ontario parks based users’ interest.** We want to keep in mind that we should design our application to be accessible to people with disabilities. (emphasized by our partner)
 
@@ -11,7 +11,7 @@
 There is always endless information around you if you are curious about your surroundings when you are walking in a park. However, it is not always easy to learn about your favorite park because it would be mad to put up signs at every possible place that deserve some showcasing. **Our mobile application will pick up the real time-location from the user. Based on the user’s real-time location, we will present the user with audio and text-based information about the user’s surroundings such as information about plants, historical sites, animals, tourist attractions, etc.** Users can customize the application based on their interest. For example, if a user only wants to learn about the surrounding plants, our application will only provide audio and text-based information about the surrounding plants. If a user is a history fanatic, our application will only provide audio and text-based information about the surrounding historical sites.
 
 
-#### Q2: Who are your target users?
+### Q2: Who are your target users?
 
 The target users of our mobile application are **teachers**, **students**, and **people who frequently visit parks**.
  
@@ -22,7 +22,7 @@ For people who visit the park frequently, we aim to build a mobile application t
 It is inconvenient for people with weak vision or vision problems to read signs in parks. We want to keep in mind that we want our application to be accessible for those who have disabilities. We want to help them by transferring visual information to an audio information/story. Thus, they can have an understanding of the park and avoid having a hard time reading the signs.
 
 
-#### Q3: Why would your users choose your product? What are they using today to solve their problem/need?
+### Q3: Why would your users choose your product? What are they using today to solve their problem/need?
 
 > Short (1 - 2 min' read max)
  * We want you to "connect the dots" for us - Why does your product (as described in your answer to Q1) fits the needs of your users (as described in your answer to Q2)?
@@ -33,7 +33,7 @@ It is inconvenient for people with weak vision or vision problems to read signs 
     * Does this application exist in another form? If so, how does your differ and provide value to the users?
     * How does this align with your partner's organization's values/mission/mandate?
 
-#### Q4: How will you build it?
+### Q4: How will you build it?
 
 > Short (1-2 min' read max)
  * What is the technology stack? Specify any and all languages, frameworks, libraries, PaaS products or tools. 
@@ -54,7 +54,7 @@ We are using SQL for the database. Since we need to store detailed information (
 
 We will be using CircleCI as our continuous integration tool, because CircleCI is able to perform tests across different frameworks and languages. We are using Django(Python) and React Native(JavaScript) and we would like a single platform that can handle both frameworks.
 
-#### Q5: What are the user stories that make up the MVP?
+### Q5: What are the user stories that make up the MVP?
 
  * As a teacher, I want to let my students learn more about the park in order to meet the education needs on this sort of trip.
    * Acceptance Criteria: Provide more knowledge to user compared to signs that is already in the park
@@ -74,7 +74,7 @@ We will be using CircleCI as our continuous integration tool, because CircleCI i
 
 ## Process Details
 
-#### Q6: What are the roles & responsibilities on the team?
+### Q6: What are the roles & responsibilities on the team?
 
 Describe the different roles on the team and the responsibilities associated with each role. 
  * Roles should reflect the structure of your team and be appropriate for your project. Not necessarily one role to one team member.
@@ -99,7 +99,7 @@ Wang Ting Shu will mainly focus on the database side of the development. He is f
 Zhiyuan Sun will work on backend development mainly. He is familiar with python, Java and has some experience with developing mobile applications. He also has some experience on reading and using APIs. What he lacks is that he is not familiar with the backend library - Django - that he is going to use in this project. Also, he lacks experience with Javascript as he is learning it currently. Moreover, he lacks communication experience on a large scale project.
 
 
-#### Q7: What operational events will you have as a team?
+### Q7: What operational events will you have as a team?
 
 * We will having meetings on Zoom at 7:30 pm every Saturday. The duration of the meeting will be 1 hour or more.
 * We will have a weekly group meeting for 1 hour or more. The purpose of this meeting is to go over what we have done last week, see what we have accomplished, rate ourselves on the success of this week, and see what we could improve on in the coming weeks. Also, we will discuss what to do next week and what to discuss in the next partner meeting.
@@ -108,11 +108,11 @@ Zhiyuan Sun will work on backend development mainly. He is familiar with python,
   * We listened to the project idea from our partner and discussed how the project can be done and the limitations of his idea. We gave a brief feedback of what we thought and discussed the overall outcome of the project. The outcomes of this meeting was we have a better understanding of what our partner wants to accomplish and gave our partner a vision of what we could accomplish. The meeting was 57 minutes. Our meeting time will be every Wednesday 1:00 pm to 2:00pm.
   * Our second partner meeting was on October 14th. Our team went over our deliverable 1 with our partner and also presented how we envision the minimum viable product. Our partner reminded us of the accessibility aspect of the project and promised to look for data for our project. We agreed on recurring meeting on every Wednesday.
   
-#### Q8: What artifacts will you use to self-organize?
+### Q8: What artifacts will you use to self-organize?
 
 We have chosen Asana to organize our team. We will use the task board on Asana to keep track of what needs to be done and assign due dates, assignee, and priority for each task. We will use the kanban approach in the assignment of tasks, every one will choose what they want to do in the tasks and assign those tasks to themselves. When there is a task that is not assigned, we will discuss it as a group and find out a way to implement the feature. We will discuss the status of work for a particular task during the weekly meeting and code reviews and we also decide what to add to the kanban board during the weekly meetings. Every person in the team is responsible for testing their codes and they will demonstrate what they have done to ensure the feature and correctly implemented during the code review. We are not tracking our meeting minutes because we are continuously updating our teammates about the status of our work on certain features using social media platforms and meeting is just for keeping everyone up to date on the status of the whole project. 
 
-#### Q9: What are the rules regarding how your team works?
+### Q9: What are the rules regarding how your team works?
 
 **Communications:**
 We are using WeChat for team communication, and we are expecting to have at least two team meetings per week. We are using Zoom for weekly partner meetings. We will also use emails and phone calls for quick responses from our partner. Also, we are meeting with the TA during the weekly tutorial time with Zoom.
