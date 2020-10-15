@@ -1,20 +1,26 @@
-# YOUR PRODUCT/TEAM NAME
+# Ontario Parks
 
 ## Product Details
  
 #### Q1: What are you planning to build?
 
 **We are planning to build a geo-audio, real-time locating mobile application that provides natural, cultural, and historical information and anomalies of Ontario parks based users’ interest.** We want to keep in mind that we should design our application to be accessible to people with disabilities. (emphasized by our partner)
+
 **We want to provide information to people who are curious about their surroundings when they are walking in a park.** Is there a park that you visited the most and you would love to learn about the most popular trail but there is no way to know that information? Or is there a time you went to a park and saw a garden of peculiar flowers that you were so curious about but there was no way to learn about them? What about if there is a mobile application that provides all the information that you need based on your interest and curiosity!
+
 There is always endless information around you if you are curious about your surroundings when you are walking in a park. However, it is not always easy to learn about your favorite park because it would be mad to put up signs at every possible place that deserve some showcasing. **Our mobile application will pick up the real time-location from the user. Based on the user’s real-time location, we will present the user with audio and text-based information about the user’s surroundings such as information about plants, historical sites, animals, tourist attractions, etc.** Users can customize the application based on their interest. For example, if a user only wants to learn about the surrounding plants, our application will only provide audio and text-based information about the surrounding plants. If a user is a history fanatic, our application will only provide audio and text-based information about the surrounding historical sites.
 
 
 #### Q2: Who are your target users?
 
-  > Short (1 - 2 min' read max)
- * Be specific (e.g. a 'a third-year university student studying Computer Science' and not 'a student')
- * **Feel free (but not obligated) to use personas.         
-   You can create your personas as part of this Markdown file, or add a link to an external site (for example, [Xtensio](https://xtensio.com/user-persona/)).**
+The main target users of our mobile application are **teachers**, **students**, and **people who frequently visit parks**.
+ 
+For teachers and students, we want to provide an educational platform for them. Our mobile application provides natural, cultural, and historical information and anomalies of Ontario parks. Therefore, they do not need to read signs or listen to the general information from the tour guide. Besides these, they can see interesting locations next to them and visit the locations that interested them. Our mobile application gives students information about this park and the stories behind it, which meets the teacher's goal for the trip.
+ 
+For people who visit the park frequently, we aim to build a mobile application that has answers for their curiosities about the park and notify them of any updates. As they walk through the park, they may wonder what flowers, animals, or trees are in front of them or what is the difference in the park among seasons. Then, they can use our mobile application for the answer. Also, for any updates in the park, they will be noticed immediately by the mobile application.
+ 
+It is inconvenient for people with weak vision or vision problems to read signs in parks. We want to keep in mind that we want our application to be accessible for those who have disabilities. We want to help them by transferring visual information to an audio information/story. Thus, they can have an understanding of the park and avoid having a hard time reading the signs.
+
 
 #### Q3: Why would your users choose your product? What are they using today to solve their problem/need?
 
@@ -38,10 +44,19 @@ There is always endless information around you if you are curious about your sur
 
 #### Q5: What are the user stories that make up the MVP?
 
- * At least 5 user stories concerning the main features of the application - note that this can broken down further
- * You must follow proper user story format (as taught in lecture) ```As a <user of the app>, I want to <do something in the app> in order to <accomplish some goal>```
- * If you have a partner, these must be reviewed and accepted by them
- * The user stories should be written in Github and each one must have clear acceptance criteria.
+ * As a teacher, I want to let my students learn more about the park in order to meet the education needs on this sort of trip.
+   * Acceptance Criteria: Provide more knowledge to user compared to signs that is already in the park
+ * As a student, I want to see where the interesting locations are relative to my location in order to go there faster.
+   * Acceptance Criteria: Have marks on the locations that are important
+ * As a resident around the park, I want to be notified when there is something interesting around me when I am walking in the park so that I can have a sense of discovery in a park that I have walked hundreds of times.
+   * Acceptance Criteria: Can notify user in some mean when they pass some location that might interest the user
+ * As a tourist, I want to hear and see only what I am interested in because I do not have much time to spend in the park.
+   * Acceptance Criteria: Able to display only the locations that have something that might interest the user
+ * As a first time visitor, I want to use the app as a map in the park in order for me to navigate through the park.
+   * Acceptance Criteria: Can display internal routes(if available) and public infrastructures(e.g.: toilet) on the map
+ * As a person with bad sight, I want to be able to use the app in order to discover what I am not able to see before.
+   * Acceptance Criteria: The user interface is friendly to people with bad eyesight
+
 
 ----
 
@@ -70,14 +85,7 @@ Describe meetings (and other events) you are planning to have.
   
 #### Q8: What artifacts will you use to self-organize?
 
-List/describe the artifacts you will produce in order to organize your team.       
-
- * Artifacts can be To-Do lists, Task boards, schedule(s), meeting minutes, etc.
- * We want to understand:
-   * How do you keep track of what needs to get done?
-   * How do you prioritize tasks?
-   * How do tasks get assigned to team members?
-   * How do you determine the status of work from inception to completion?
+We have chosen Asana to organize our team. We will use the task board on Asana to keep track of what needs to be done and assign due dates, assignee, and priority for each task. We will use the kanban approach in the assignment of tasks, every one will choose what they want to do in the tasks and assign those tasks to themselves. When there is a task that is not assigned, we will discuss it as a group and find out a way to implement the feature. We will discuss the status of work for a particular task during the weekly meeting and code reviews and we also decide what to add to the kanban board during the weekly meetings. Every person in the team is responsible for testing their codes and they will demonstrate what they have done to ensure the feature and correctly implemented during the code review. We are not tracking our meeting minutes because we are continuously updating our teammates about the status of our work on certain features using social media platforms and meeting is just for keeping everyone up to date on the status of the whole project. 
 
 #### Q9: What are the rules regarding how your team works?
 
