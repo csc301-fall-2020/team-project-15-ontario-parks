@@ -13,7 +13,7 @@ There is always endless information around you if you are curious about your sur
 
 #### Q2: Who are your target users?
 
-The main target users of our mobile application are **teachers**, **students**, and **people who frequently visit parks**.
+The target users of our mobile application are **teachers**, **students**, and **people who frequently visit parks**.
  
 For teachers and students, we want to provide an educational platform for them. Our mobile application provides natural, cultural, and historical information and anomalies of Ontario parks. Therefore, they do not need to read signs or listen to the general information from the tour guide. Besides these, they can see interesting locations next to them and visit the locations that interested them. Our mobile application gives students information about this park and the stories behind it, which meets the teacher's goal for the trip.
  
@@ -41,6 +41,18 @@ It is inconvenient for people with weak vision or vision problems to read signs 
  * Describe the architecture - what are the high level components or patterns you will use? Diagrams are useful here. 
  * Will you be using third party applications or APIs? If so, what are they?
  * What is your testing strategy?
+
+* Frontend (Mobile): React Native
+* Backend: Django
+* Audio file storage: DigitalOcean
+* CI/CD: Circle CI
+* Deployment: apk(frontend), Heroku(Backend)
+
+We will be using Django for our backend, because Django is “batteries included” which means that Django comes will most of the libraries and tools required for common use cases out of the box. Also, Django is built with python which is a language that most of our team members are familiar with. It also comes with a fully functional ORM that makes it very easy to work with database queries.
+
+We are using SQL for the database. Since we need to store detailed information (audio, picture) about the park, the data will be huge and SQL is able to handle such big data. Also, SQL allows a single database design being asked by a broad set of questions, which is ideal for our project. SQL is the database language that our team members are mostly familiar with.
+
+We will be using CircleCI as our continuous integration tool, because CircleCI is able to perform tests across different frameworks and languages. We are using Django(Python) and React Native(JavaScript) and we would like a single platform that can handle both frameworks.
 
 #### Q5: What are the user stories that make up the MVP?
 
@@ -70,18 +82,31 @@ Describe the different roles on the team and the responsibilities associated wit
 List each team member and:
  * A description of their role(s) and responsibilities including the components they'll work on and non-software related work
  * 3 technical strengths and weaknesses each (e.g. languages, frameworks, libraries, development methodologies, etc.)
+ * Roles
+   * Product manager: oversee the whole project and to set deadlines for tasks
+   * Backend developers: RESTful API development, data and application integration, core application logic
+   * Frontend developers: design UI, implement the frontend
+   * Database: design the database schema
+   
+Ka Chun (Franco) Mo will mainly be responsible for backend development. Also, he will be the main liaison to communicate with the partners. He is familiar with various coding languages such as Python and JavaScript. He has experience in developing web applications - both frontend using React and backend using Node.js. He also has some experience working with RESTful API. However, he lacks the experience in designing an impeccable database schema. He sometimes has a hard time to keep up with the project schedule (But hey, this is where our beloved product manager comes into place!). He also needs to pick up with the backend technology - Django - as he has no prior experience using it.
+
+Calvin Yu will mainly be responsible for the mobile frontend development and will also be responsible for some roles for product management like coordinating meetings and overseeing the progress of the whole project. He is familiar with Python and JavaScript, worked on Android apps, and also frameworks such as React and Node.js that will be used in the mobile front-end. What he lacks is his experience in things like UI design, testing, and also mobile development using React Native. In his previous mobile development experience, the app is developed for just the demonstration of knowledge and was not built for users. The lack of experience in building UI might cause him some struggles when taking his park on building the mobile front-end. He has used React for web development before and has used Java for mobile development but he does not have any experience in combining the two together. Lastly, he rarely tests his code thoroughly using methods like unit test and he will need to adapt to the new developing environment since we are all expected to test our own code thoroughly.
+
+Sherry Wang will mainly work on front-end development. She is familiar with various coding languages, such as Python and Java, and has experience developing Android applications, designing a database schema, and designing UI. However, she lacks the expertise in developing web applications as she is currently learning it. She is also not familiar with React that will be used in the mobile front-end. Lastly, she is still mastering her writing skills.
+
+Wang Ting Shu will mainly focus on the database side of the development. He is familiar with various coding techniques such as PHP, SQL and Json. He is able to create a secure server to store all the data needed for the project. Also creating a database to allow access to anything the application needs. He is not as good in front end development, lacking experience in framework for front end like Node.js. And he is also sometimes late on his dues. He will also focus on on-site data gathering if there is any needed, going to the physical parks that we are researching to gather more information from people there like park security or information centres.
+
+Zhiyuan Sun will work on backend development mainly. He is familiar with python, Java and has some experience with developing mobile applications. He also has some experience on reading and using APIs. What he lacks is that he is not familiar with the backend library - Django - that he is going to use in this project. Also, he lacks experience with Javascript as he is learning it currently. Moreover, he lacks communication experience on a large scale project.
+
 
 #### Q7: What operational events will you have as a team?
 
-Describe meetings (and other events) you are planning to have. 
- * When and where? Recurring or ad hoc? In-person or online?
- * What's the purpose of each meeting?
- * Other events could be coding sessions, code reviews, quick weekly sync meeting online, etc.
- * You must have at least 2 meetings with your project partner (if you have one) before D1 is due. Describe them here:
-   * What did you discuss during the meetings?
-   * What were the outcomes of each meeting?
-   * You must provide meeting minutes.
-   * You must have a regular meeting schedule established by the second meeting.  
+* We will having meetings on Zoom at 7:30 pm every Saturday. The duration of the meeting will be 1 hour or more.
+* We will have a weekly group meeting for 1 hour or more. The purpose of this meeting is to go over what we have done last week, see what we have accomplished, rate ourselves on the success of this week, and see what we could improve on in the coming weeks. Also, we will discuss what to do next week and what to discuss in the next partner meeting.
+* At least once a week we will be doing a coding review. The time of the review will be flexible according to members' time. The review will be role specific and can be done in small groups. We can have meetings for specific problems that don’t necessarily need the whole team to meet together.
+* Partner meetings
+  * We listened to the project idea from our partner and discussed how the project can be done and the limitations of his idea. We gave a brief feedback of what we thought and discussed the overall outcome of the project. The outcomes of this meeting was we have a better understanding of what our partner wants to accomplish and gave our partner a vision of what we could accomplish. The meeting was 57 minutes. Our meeting time will be every Wednesday 1:00 pm to 2:00pm.
+  * Our second partner meeting was on October 14th. Our team went over our deliverable 1 with our partner and also presented how we envision the minimum viable product. Our partner reminded us of the accessibility aspect of the project and promised to look for data for our project. We agreed on recurring meeting on every Wednesday.
   
 #### Q8: What artifacts will you use to self-organize?
 
@@ -89,21 +114,22 @@ We have chosen Asana to organize our team. We will use the task board on Asana t
 
 #### Q9: What are the rules regarding how your team works?
 
-Describe your team's working culture.
-
 **Communications:**
- * What is the expected frequency? What methods/channels are appropriate? 
- * If you have a partner project, what is your process (in detail) for communicating with your partner?
+We are using WeChat for team communication, and we are expecting to have at least two team meetings per week. We are using Zoom for weekly partner meetings. We will also use emails and phone calls for quick responses from our partner. Also, we are meeting with the TA during the weekly tutorial time with Zoom.
  
 **Meetings:**
- * How are people held accountable for attending meetings, completing action items? Is there a moderator or process?
+All meetings are mandatory. If one cannot attend a meeting or complete action items, one should notice the team as soon as possible.
  
 **Conflict Resolution:**
- * List at least three team scenarios/conflicts you discussed in lecture and how you decided you will resolve them. Indecisions? Non-responsive team members? Any other scenarios you can think of?
-
-
-
-
+1. Team members have different coding styles (comments, variable naming convention, tab or space)
+   1. All team members should agree on one style before any coding process.
+1. A team member edits others’ code without any notice.
+   1. No one can edit others’ code without notice. Any modifications can be made during code review.
+1. A merge conflict occurs.
+   1. Team members working on the same feature should work on the same branch, discuss common parts, and push frequently.
+1. Team members have different progress in completing tasks.
+   1. Setting deadlines that everyone agrees on based on the complexity of work and everyone’s work productivity.
+   
 ----
 ### Highlights
 
