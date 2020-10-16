@@ -24,29 +24,22 @@ It is inconvenient for people with weak vision or vision problems to read signs 
 
 ### Q3: Why would your users choose your product? What are they using today to solve their problem/need?
 
-> Short (1 - 2 min' read max)
- * We want you to "connect the dots" for us - Why does your product (as described in your answer to Q1) fits the needs of your users (as described in your answer to Q2)?
- * Explain the benefits of your product explicitly & clearly. For example:
-    * Save users time (how much?)
-    * Allow users to discover new information (which information? And, why couldn't they discover it before?)
-    * Provide users with more accurate and/or informative data (what kind of data? Why is it useful to them?)
-    * Does this application exist in another form? If so, how does your differ and provide value to the users?
-    * How does this align with your partner's organization's values/mission/mandate?
+Our product allows users to discover new information about the environment around them according to their interest. In this way, every user can have their own view of the park. The application can also change the park introduction/information based on season, animals around etc. Hence, every single trip to the park is unique.
+
+Also, our product provides parks’ official websites and maps. It has all directional signs and guides within the app. Therefore, we can decrease the use of physical signs in the park and leave more space to nature.
+
+Moreover, our product provides users with more detailed information compared to existing applications. Since it would be developed for parks, it would focus more on guided information and nature compared to a regular app and our voice guide is also an unique feature.
+
 
 ### Q4: How will you build it?
-
-> Short (1-2 min' read max)
- * What is the technology stack? Specify any and all languages, frameworks, libraries, PaaS products or tools. 
- * How will you deploy the application?
- * Describe the architecture - what are the high level components or patterns you will use? Diagrams are useful here. 
- * Will you be using third party applications or APIs? If so, what are they?
- * What is your testing strategy?
 
 * Frontend (Mobile): React Native
 * Backend: Django
 * Audio file storage: DigitalOcean
 * CI/CD: Circle CI
 * Deployment: apk(frontend), Heroku(Backend)
+
+We will be using React Native for our frontend. React Native's syntax and concepts are similar to those of React which most of our team members have experiences in. It also provides us with the ease of development since we do not have to learn iOS and Android development seperately and we can build our application using React Native and deployed on both platform.
 
 We will be using Django for our backend, because Django is “batteries included” which means that Django comes will most of the libraries and tools required for common use cases out of the box. Also, Django is built with python which is a language that most of our team members are familiar with. It also comes with a fully functional ORM that makes it very easy to work with database queries.
 
@@ -98,6 +91,8 @@ Wang Ting Shu will mainly focus on the database side of the development. He is f
 
 Zhiyuan Sun will work on backend development mainly. He is familiar with python, Java and has some experience with developing mobile applications. He also has some experience on reading and using APIs. What he lacks is that he is not familiar with the backend library - Django - that he is going to use in this project. Also, he lacks experience with Javascript as he is learning it currently. Moreover, he lacks communication experience on a large scale project.
 
+Yingke Wang will mainly work on front-end development. He has previous experience in frontend Design and familiar with React. He also understands the basic principles for UI design and is willing to explore more. However, he is not proficient in the backend environment. Being responsible for frontend development, he can utilize what he is good at and contribute more efficiently at the project. 
+
 
 ### Q7: What operational events will you have as a team?
 
@@ -135,11 +130,11 @@ All meetings are mandatory. If one cannot attend a meeting or complete action it
 
 Specify 3 - 5 key decisions and/or insights that came up during your meetings
 and/or collaborative process.
+ 
+During the process of completing team delivery 1, we have talked with our partner thoroughly and discussed what he wants to build and what we are able to offer. As a result, we discovered that one major obstacle that we faced is the lack of existing data and resources on the project. This forces us to make a decision on the source of our data. We are able to choose from creating the resource by ourselves or finding an existing data set from places such as the government of Ontario. We ended up choosing the first way because the data sets that we can find are not dense enough for our purpose, the data usually have kilometers of distance between each of the data points.
 
- * Short (5 min' read max)
- * Decisions can be related to the product and/or the team process.
-    * Mention which alternatives you were considering.
-    * Present the arguments for each alternative.
-    * Explain why the option you decided on makes the most sense for your team/product/users.
- * Essentially, we want to understand how (and why) you ended up with your current product and process plan.
- * This section is useful for important information regarding your decision making process that may not necessarily fit in other sections. 
+After choosing our data source, we faced another problem that is how can we create the resources by ourselves. We have considered using Arrowhead Provincial Park as the location because it is the park where our partner John works at. However, since we have a very limited timeframe on the project and we are not able to travel to the park for things such as recording the GPS coordinate of each point of interest, we have settled on High Park which is of a much manageable size and at a location that we are able to access more easily. This decision allows us to focus more on the program and product that we are delivering and less on the content that is presented and will ultimately help us deliver a better product where our partner can enrich the content afterwards.
+
+Lastly, we decide on how we will work as a team. We can choose to work together on all parts of the program or divide into smaller groups that each focus on a single tech stack. We have chosen the latter for better efficiency on developing. Many of us have never used the framework/language that we are using in this project and focusing on a single tech stack will reduce the amount of time that we spend on learning and adapting to the new frameworks. Also, splitting into groups each focusing on a single part allows us to benefit from more abstraction. For example, someone working on the frontend will only need to know what the API that the backend group created will return to a request but do not need to dig into django and learn the framework from the beginning. This will make our work much more manageable since most of us are also working on other things such as PEY applications.
+All of these decisions will ultimately help us to deliver a better product that can demonstrate the idea and vision of our partner. We are very excited to be working with John this time and are committed to deliver the best product we can.
+
