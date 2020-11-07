@@ -1,4 +1,13 @@
 {
   "name": "OntarioPark",
-  "displayName": "OntarioPark"
+  "displayName": "OntarioPark",
+  "expo": {
+    "ios": {
+      "infoPlist": {
+        "UIBackgroundModes": [
+          "audio"
+        ]
+      }
+    }
+  }
 }
