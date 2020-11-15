@@ -4,7 +4,7 @@ const app = express();
 
 // Routes
 app.get('/', (req, res) => {
-  res.send('Welcome to Ontario Home');
+  res.send('Welcome to Ontario Home!');
 });
 
 module.exports = app;
