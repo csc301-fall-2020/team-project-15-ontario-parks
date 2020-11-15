@@ -32,7 +32,7 @@ function usePlayBack(src) {
         soundObject.loadAsync(source, {shouldPlay: isPlaying}, false)    
     }, [audioSource])
 
-    return { setIsPlaying, setAudioSource }
+    return { isPlaying, setIsPlaying, setAudioSource }
 }
 
 export default usePlayBack
