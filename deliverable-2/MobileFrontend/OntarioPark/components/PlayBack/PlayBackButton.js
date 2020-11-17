@@ -1,5 +1,5 @@
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
 import { StyleSheet, TouchableOpacity, View } from 'react-native';
 import usePlayBack from '../../hooks/usePlayBack';
 
@@ -7,6 +7,10 @@ function PlayBackButton(props) {
     const { isPlaying, setIsPlaying, setAudioSource } = usePlayBack(props.src)
     
     const handlePress = () => setIsPlaying(prevIsPlaying => !prevIsPlaying);
+
+    useEffect(() => {
+        setAudioSource(props.src)
+    }, [props.src])
 
     return(
         <View>
