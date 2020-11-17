@@ -17,20 +17,20 @@ function usePlayBack(src) {
     const soundObject = new Audio.Sound()
 
     useEffect(() => {
-        if (isPlaying) {
-            soundObject.playAsync()
-        } else {
-            soundObject.pauseAsync()
-        }
-    }, [isPlaying])
-
-    useEffect(() => {
         const source = {
             uri: audioSource
         }
     
         soundObject.loadAsync(source, {shouldPlay: isPlaying}, false)    
     }, [audioSource])
+
+    useEffect(() => {
+        if (isPlaying) {
+            soundObject.playAsync(0)
+        } else {
+            soundObject.pauseAsync()
+        }
+    }, [isPlaying])
 
     return { isPlaying, setIsPlaying, setAudioSource }
 }
