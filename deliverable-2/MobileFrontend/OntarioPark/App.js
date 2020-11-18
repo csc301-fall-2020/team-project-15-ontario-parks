@@ -28,7 +28,7 @@ import PlayBackButton from './components/PlayBack/PlayBackButton'
 
 const App = () => {
   return (
-    <PlayBackButton />
+    <PlayBackButton src="http://138.197.141.138/CDGE_A1_Pista30.mp3" />
   );
 };
 
