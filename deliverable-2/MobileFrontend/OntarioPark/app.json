@@ -2,12 +2,11 @@
   "name": "OntarioPark",
   "displayName": "OntarioPark",
   "expo": {
-    "ios": {
-      "infoPlist": {
-        "UIBackgroundModes": [
-          "audio"
-        ]
-      }
-    }
+    "name": "OntarioPark",
+    "slug": "OntarioPark",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
   }
 }
