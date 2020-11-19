@@ -24,11 +24,16 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-import PlayBackButton from './components/PlayBack/PlayBackButton'
+import Map from './components/Map/Map'
 
 const App = () => {
   return (
-    <PlayBackButton src="http://138.197.141.138/CDGE_A1_Pista30.mp3" />
+    <Map
+      latitude={43.6464479}
+      longitude={-79.463079}
+      latitudeDelta={0.025}
+      longitudeDelta={0.02}
+    />
   );
 };
 
