@@ -1,0 +1,46 @@
+const mongoose = require('mongoose');
+
+const attractionSchema = mongoose.Schema({
+  name: {
+    type: String,
+    required: true,
+  },
+  longitude: {
+    type: String,
+    required: true,
+  },
+  latitude: {
+    type: String,
+    required: true,
+  },
+  description: {
+    type: String,
+    required: true,
+  },
+  audio: {
+    type: String,
+    required: true,
+  },
+  image: {
+    type: String,
+    required: true,
+  },
+});
+
+const Attraction = mongoose.model('Attraction', attractionSchema);
+
+const testAttraction = new Attraction({
+  name: 'High Park',
+  longitude: 1,
+  latitude: 1,
+  description: 'Welcome to High Park',
+});
+
+testAttraction
+  .save()
+  .then((doc) => {
+    console.log(doc);
+  })
+  .catch((err) => console.log(err));
+
+module.exports = Attraction;

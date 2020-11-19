@@ -9,7 +9,8 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "express": "^4.17.1"
+        "express": "^4.17.1",
+        "mongoose": "^5.10.14"
     },
     "engines": {
         "node": "v12.18.1",
