@@ -33,6 +33,14 @@ const App = () => {
       longitude={-79.463079}
       latitudeDelta={0.025}
       longitudeDelta={0.02}
+      locations={[
+        {
+          title: "title",
+          id: "123",
+          latitude: 43.6464479,
+          longitude: -79.463079
+        }
+      ]}
     />
   );
 };

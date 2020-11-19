@@ -1,6 +1,7 @@
 import React from 'react';
-import MapView from 'react-native-maps';
+import MapView, { Marker, PROVIDER_GOOGLE } from 'react-native-maps';
 import { StyleSheet } from 'react-native';
+import { Icon } from 'react-native-vector-icons/MaterialIcons'
 
 function Map(props) {
     const mapRegion = {
@@ -14,7 +15,20 @@ function Map(props) {
         <MapView 
             style={styles.mapDisplay} 
             region={mapRegion}    
-        />
+            provider={PROVIDER_GOOGLE}
+        >
+            {props.locations.map(location => (
+                <Marker 
+                    title={location.title} 
+                    key={location.id}
+                    coordinate={{
+                        longitude: location.longitude,
+                        latitude: location.latitude
+                    }}
+                >
+                </Marker>                
+            ))}
+        </MapView>
     )
 }
 
