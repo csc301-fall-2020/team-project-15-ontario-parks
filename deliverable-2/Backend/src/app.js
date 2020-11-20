@@ -9,7 +9,6 @@ const app = express();
 app.use(express.json());
 
 // Routes
-app.use('/api/gogos', attractionRoute);
-app.use('/api/infrastructure', infrastructureRoute);
+app.use('/api/attractions', attractionRoute);
 
 module.exports = app;
