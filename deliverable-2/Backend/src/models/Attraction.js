@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const app = require("../app");
 
 const attractionSchema = mongoose.Schema({
   name: {
@@ -35,7 +36,6 @@ const testAttraction = new Attraction({
   latitude: 1,
   description: 'Welcome to High Park',
 });
-
 testAttraction
   .save()
   .then((doc) => {
