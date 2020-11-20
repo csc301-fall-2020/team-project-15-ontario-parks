@@ -1,17 +1,23 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { StyleSheet, View } from 'react-native'
 import { Text } from 'react-native-elements'
+import { SafeAreaInsetsContext } from 'react-native-safe-area-context'
 
 function MapHeader(props) {
     /**
      * Header for map page. Displays the string in prop text.
      */
+    const { top } = useContext(SafeAreaInsetsContext)
+
     return(
-        <View style={styles.header}>
+        <View style={{
+                ...styles.header,
+                top: top + 8
+            }}>
             <Text style={styles.text}>
                 {props.text}
             </Text>
-        </View>
+        </View>            
     )
 }
 

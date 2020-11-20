@@ -15,6 +15,7 @@ import {
   Text,
   StatusBar,
 } from 'react-native';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 import {
   Header,
@@ -28,7 +29,10 @@ import MapPage from './pages/MapPage';
 
 const App = () => {
   return (
-    <MapPage />
+    <SafeAreaProvider>
+      <MapPage />      
+    </SafeAreaProvider>
+
   );
 };
 
