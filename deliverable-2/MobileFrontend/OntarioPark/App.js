@@ -24,24 +24,11 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-import Map from './components/Map/Map'
+import MapPage from './pages/MapPage';
 
 const App = () => {
   return (
-    <Map
-      latitude={43.6464479}
-      longitude={-79.463079}
-      latitudeDelta={0.025}
-      longitudeDelta={0.02}
-      locations={[
-        {
-          title: "title",
-          id: "123",
-          latitude: 43.6464479,
-          longitude: -79.463079
-        }
-      ]}
-    />
+    <MapPage />
   );
 };
 

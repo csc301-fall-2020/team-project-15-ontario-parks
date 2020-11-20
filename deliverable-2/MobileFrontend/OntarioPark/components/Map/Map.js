@@ -1,7 +1,6 @@
-import React from 'react';
-import MapView, { Marker, PROVIDER_GOOGLE } from 'react-native-maps';
-import { StyleSheet } from 'react-native';
-import { Icon } from 'react-native-vector-icons/MaterialIcons'
+import React from 'react'
+import MapView, { Marker, PROVIDER_GOOGLE } from 'react-native-maps'
+import { StyleSheet } from 'react-native'
 
 function Map(props) {
     const mapRegion = {
