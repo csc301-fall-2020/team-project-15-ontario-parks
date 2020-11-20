@@ -2,6 +2,7 @@ import React from 'react'
 import { View, StyleSheet } from 'react-native'
 import MapHeader from '../components/Header/MapHeader'
 import Map from '../components/Map/Map'
+import PlayBackButton from '../components/PlayBack/PlayBackButton'
 
 function MapPage() {
     return(
@@ -21,6 +22,9 @@ function MapPage() {
                 ]}
             />
             <MapHeader text="Welcome to High Park" />
+            <PlayBackButton 
+                src="http://138.197.141.138/CDGE_A1_Pista30.mp3"  
+            />
         </View>
     )
 }

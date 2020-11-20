@@ -3,6 +3,9 @@ import { StyleSheet, View } from 'react-native'
 import { Text } from 'react-native-elements'
 
 function MapHeader(props) {
+    /**
+     * Header for map page. Displays the string in prop text.
+     */
     return(
         <View style={styles.header}>
             <Text style={styles.text}>

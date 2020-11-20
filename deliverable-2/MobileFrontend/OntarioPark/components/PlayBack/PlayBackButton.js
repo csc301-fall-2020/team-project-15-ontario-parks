@@ -13,25 +13,33 @@ function PlayBackButton(props) {
     }, [props.src])
 
     return(
-        <View>
-            <TouchableOpacity style={styles.button} >
-                <Icon 
-                    name={isPlaying ? "pause-circle-filled" : "play-circle-filled"} 
-                    size={100} 
-                    onPress={handlePress} 
-                />
-            </TouchableOpacity>            
-        </View>
+        <TouchableOpacity style={styles.button} >
+            <Icon 
+                name={isPlaying ? "pause-circle-filled" : "play-circle-filled"} 
+                size={100} 
+                onPress={handlePress} 
+                style={styles.icon}
+            />
+        </TouchableOpacity>            
     );
 }
 
 const styles = StyleSheet.create({
     button: {
+        position: "absolute",
         width: 100,
         height: 100,
         justifyContent: 'center',
         alignItems: "center",
-
+        alignSelf: "center",
+        backgroundColor: "white",
+        borderRadius: 50,
+        bottom: 18,
+        opacity: 0.8
+    },
+    icon: {
+        opacity: 1.0,
+        color: "black"
     }
 });
 
