@@ -15,6 +15,7 @@ import {
   Text,
   StatusBar,
 } from 'react-native';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 import {
   Header,
@@ -24,11 +25,14 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-import PlayBackButton from './components/PlayBack/PlayBackButton'
+import MapPage from './pages/MapPage';
 
 const App = () => {
   return (
-    <PlayBackButton src="http://138.197.141.138/CDGE_A1_Pista30.mp3" />
+    <SafeAreaProvider>
+      <MapPage />      
+    </SafeAreaProvider>
+
   );
 };
 
