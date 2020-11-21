@@ -7,6 +7,19 @@
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
-    ]
+    ],
+    "android": {
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyBcyBilxbGrMSFxznVyvXq3dcYzdb2A5Tk"
+        }
+      }
+    },
+    "ios": {
+      "bundleIdentifier": "OntarioPark",
+      "config": {
+          "googleMapsApiKey": "AIzaSyBcyBilxbGrMSFxznVyvXq3dcYzdb2A5Tk"
+      }
+  }
   }
 }

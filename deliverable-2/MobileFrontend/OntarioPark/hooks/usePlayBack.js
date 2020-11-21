@@ -12,19 +12,28 @@ function usePlayBack(src) {
         playsInSilentModeIOS: false,
     });
     
-    const [isPlaying, setIsPlaying] = useState(false);
+    const [playing, setPlaying] = useState(false);
     const [audioSource, setAudioSource] = useState(src);
     const [soundObject, setSoundObject] = useState(new Audio.Sound());
 
+    // Updates playing state when status changes
+    soundObject.setOnPlaybackStatusUpdate(AVPlaybackStatus => {
+        if (playing != AVPlaybackStatus.isPlaying) {
+            setPlaying(AVPlaybackStatus.isPlaying)            
+        }
+    })
+
+    // Load the audio
     useEffect(() => {
-        loadAudio(soundObject, audioSource, isPlaying);
+        loadAudio(soundObject, audioSource, playing);
     }, [audioSource]);
 
-    useEffect(() => {
-        playAudio(soundObject, isPlaying)
-    }, [isPlaying]);
+    // Pause and Play the audio
+    const setIsPlaying = (isPlaying) => {
+        togglePlaying(soundObject, isPlaying)
+    }
 
-    return { isPlaying, setIsPlaying, setAudioSource };
+    return { isPlaying: playing, setIsPlaying, setAudioSource };
 }
 
 
@@ -41,7 +50,7 @@ const loadAudio = async (soundObject, audioSource, isPlaying) => {
 };
 
 
-const playAudio = async (soundObject, isPlaying) => {
+const togglePlaying = async (soundObject, isPlaying) => {
     try {
         if (isPlaying) {
             // await soundObject.playAsync();
