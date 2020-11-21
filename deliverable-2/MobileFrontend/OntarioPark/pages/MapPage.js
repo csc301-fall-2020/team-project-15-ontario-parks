@@ -10,8 +10,8 @@ function MapPage() {
             <Map
                 latitude={43.6464479}
                 longitude={-79.463079}
-                latitudeDelta={0.025}
-                longitudeDelta={0.02}
+                latitudeDelta={0.0125}
+                longitudeDelta={0.01}
                 locations={[
                     {
                     title: "title",

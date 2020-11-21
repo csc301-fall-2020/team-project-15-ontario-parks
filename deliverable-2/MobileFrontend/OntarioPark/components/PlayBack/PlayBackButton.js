@@ -6,7 +6,7 @@ import usePlayBack from '../../hooks/usePlayBack';
 function PlayBackButton(props) {
     const { isPlaying, setIsPlaying, setAudioSource } = usePlayBack(props.src)
     
-    const handlePress = () => setIsPlaying(prevIsPlaying => !prevIsPlaying);
+    const handlePress = () => setIsPlaying(!isPlaying);
 
     useEffect(() => {
         setAudioSource(props.src)
