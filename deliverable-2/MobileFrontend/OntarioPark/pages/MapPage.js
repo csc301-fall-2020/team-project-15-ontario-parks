@@ -12,7 +12,7 @@ function MapPage() {
 
     useEffect(() => {
         const attraction = getAttraction(selected)
-        if (attraction != undefined && attraction.audio) {
+        if (attraction !== undefined && attraction.audio) {
             setAudio(attraction.audio)       
         }
     }, [selected])
