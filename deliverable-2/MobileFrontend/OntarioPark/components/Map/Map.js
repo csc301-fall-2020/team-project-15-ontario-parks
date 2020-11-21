@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import MapView, { Marker, PROVIDER_GOOGLE } from 'react-native-maps'
 import { StyleSheet } from 'react-native'
 
@@ -9,6 +9,24 @@ function Map(props) {
         latitudeDelta: props.latitudeDelta,
         longitudeDelta: props.longitudeDelta
     }
+    const [ markers, setMakers ] = useState([])
+
+    useEffect(() => {
+        setMakers(props.locations.map((location, index) => (
+            <Marker 
+                title={location.name} 
+                key={index}
+                coordinate={{
+                    longitude: location.longitude,
+                    latitude: location.latitude
+                }}
+                onPress={() => {
+                    props.setSelected(location._id)
+                }}
+            />             
+        )))
+        console.log(markers)
+    }, [props.locations])
 
     return(
         <MapView 
@@ -16,17 +34,7 @@ function Map(props) {
             region={mapRegion}    
             provider={PROVIDER_GOOGLE}
         >
-            {props.locations.map(location => (
-                <Marker 
-                    title={location.title} 
-                    key={location.id}
-                    coordinate={{
-                        longitude: location.longitude,
-                        latitude: location.latitude
-                    }}
-                >
-                </Marker>                
-            ))}
+            {markers}
         </MapView>
     )
 }
