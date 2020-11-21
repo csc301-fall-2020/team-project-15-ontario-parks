@@ -3,9 +3,10 @@ import { View, StyleSheet } from 'react-native'
 import MapHeader from '../components/Header/MapHeader'
 import Map from '../components/Map/Map'
 import PlayBackButton from '../components/PlayBack/PlayBackButton'
+import SettingButton from '../components/SettingButton/SettingButton'
 import { AttractionContext } from '../contexts/AttractionContext'
 
-function MapPage() {
+function MapPage({ navigation }) {
     const [ selected, setSelected ] = useState();
     const [ audio, setAudio ] = useState("http://138.197.141.138/CDGE_A1_Pista30.mp3");
     const { setUpdate, attractions, getAttraction} = useContext(AttractionContext)
@@ -16,6 +17,10 @@ function MapPage() {
             setAudio(attraction.audio)       
         }
     }, [selected])
+
+    const goToSetting = () => {
+        navigation.navigate('Setting')
+    }
 
     return(
         <View style={styles.container}>
@@ -28,9 +33,8 @@ function MapPage() {
                 setSelected={setSelected}
             />
             <MapHeader text="Welcome to High Park" />
-            <PlayBackButton 
-                src={audio}
-            />
+            <PlayBackButton src={audio} />
+            <SettingButton handlePress={goToSetting} />
         </View>
     )
 }

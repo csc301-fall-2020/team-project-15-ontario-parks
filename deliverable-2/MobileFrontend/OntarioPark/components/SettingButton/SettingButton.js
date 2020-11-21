@@ -1,23 +1,14 @@
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import React, { useEffect } from 'react';
 import { StyleSheet, TouchableOpacity } from 'react-native';
-import usePlayBack from '../../hooks/usePlayBack';
 
-function PlayBackButton(props) {
-    const { isPlaying, setIsPlaying, setAudioSource } = usePlayBack(props.src)
-    
-    const handlePress = () => setIsPlaying(!isPlaying);
-
-    useEffect(() => {
-        setAudioSource(props.src)
-    }, [props.src])
-
+function SettingButton(props) {
     return(
         <TouchableOpacity style={styles.button} >
             <Icon 
-                name={isPlaying ? "pause-circle-filled" : "play-circle-filled"} 
-                size={100} 
-                onPress={handlePress} 
+                name="settings" 
+                size={50} 
+                onPress={props.handlePress} 
                 style={styles.icon}
             />
         </TouchableOpacity>            
@@ -27,14 +18,15 @@ function PlayBackButton(props) {
 const styles = StyleSheet.create({
     button: {
         position: "absolute",
-        width: 100,
-        height: 100,
+        width: 50,
+        height: 50,
         justifyContent: 'center',
         alignItems: "center",
         alignSelf: "center",
         backgroundColor: "white",
-        borderRadius: 50,
+        borderRadius: 25,
         bottom: 22,
+        right: 22,
         opacity: 0.8
     },
     icon: {
@@ -43,4 +35,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default PlayBackButton
+export default SettingButton
