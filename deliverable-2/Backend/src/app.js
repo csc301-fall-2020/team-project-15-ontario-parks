@@ -1,7 +1,7 @@
 const express = require('express');
 
 const attractionRoute = require('./routes/attractionRoute');
-const infrastructureRoute = require('./routes/infrastructureRoute');
+// const infrastructureRoute = require('./routes/infrastructureRoute');
 
 const app = express();
 
