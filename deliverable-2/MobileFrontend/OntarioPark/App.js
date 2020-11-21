@@ -41,10 +41,9 @@ const App = () => {
   }
   return (
     <SafeAreaProvider>
-
       <AttractionContextProvider>
         {/*<MapHeader />*/}
-      <SettingPage/>
+        <MapPage />
       </AttractionContextProvider>
     </SafeAreaProvider>
   );

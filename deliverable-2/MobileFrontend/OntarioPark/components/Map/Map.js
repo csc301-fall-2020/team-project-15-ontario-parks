@@ -25,7 +25,6 @@ function Map(props) {
                 }}
             />             
         )))
-        console.log(markers)
     }, [props.locations])
 
     return(

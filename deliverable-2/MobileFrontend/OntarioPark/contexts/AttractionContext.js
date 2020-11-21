@@ -9,7 +9,7 @@ function AttractionContextProvider(props) {
     const [ update, setUpdate ] = useState(true)
 
     const getAttraction = (id) => {
-        return attractions.find(attraction => attraction._id = id)
+        return attractions.find(attraction => attraction._id == id)
     }
 
     // Gets all avaliable items from the backend
