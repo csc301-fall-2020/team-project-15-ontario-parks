@@ -23,7 +23,6 @@ function MapHeader(props) {
 
 const styles = StyleSheet.create({
     header: {
-        backgroundColor: "transparent",
         position: "absolute",
         padding: 18,
         alignSelf: "center",
