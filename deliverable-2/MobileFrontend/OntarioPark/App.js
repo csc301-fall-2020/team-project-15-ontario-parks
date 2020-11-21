@@ -1,22 +1,12 @@
 import React, { useState } from 'react';
-import {
-  StyleSheet,
-} from "react-native";
 import { SafeAreaProvider } from "react-native-safe-area-context";
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 import {AppLoading} from "expo";
-import {
-  // Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from "react-native/Libraries/NewAppScreen";
 
 import SettingPage from "./pages/SettingPage";
 import MapPage from "./pages/MapPage";
 import * as Font from "expo-font";
-// import Header from "./components/Header";
-// import DetailPage from "./components/DetailPage";
 
 import { AttractionContextProvider } from './contexts/AttractionContext'
 
@@ -29,6 +19,7 @@ const fetchFonts = () => {
 
 const App = () => {
   const [dataLoaded, setDataLoaded] = useState(false);
+  const Stack = createStackNavigator();
 
   if (!dataLoaded) {
     return (
@@ -42,8 +33,24 @@ const App = () => {
   return (
     <SafeAreaProvider>
       <AttractionContextProvider>
-        {/*<MapHeader />*/}
-        <MapPage />
+        <NavigationContainer>
+          <Stack.Navigator 
+            initialRouteName="Map"
+            screenOptions={{
+              headerShown: false
+            }}
+          >
+            <Stack.Screen 
+              name="Map"
+              component={MapPage}
+            />
+            
+            <Stack.Screen 
+              name="Setting"
+              component={SettingPage}
+            />
+          </Stack.Navigator>
+        </NavigationContainer>
       </AttractionContextProvider>
     </SafeAreaProvider>
   );
