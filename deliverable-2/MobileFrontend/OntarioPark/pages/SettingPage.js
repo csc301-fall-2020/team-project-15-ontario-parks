@@ -1,20 +1,26 @@
 import React from 'react'
-import { View, StyleSheet } from 'react-native'
+import { View, StyleSheet, ScrollView } from 'react-native'
 import MapHeader from "../components/Header/MapHeader";
 import SettingHeader from "../components/Header/SettingHeader";
-
+import SettingItem from "../components/SettingItem";
 const SettingPage = () => {
 
     return (
-        <View>
+        <View style={styles.screen}>
             <SettingHeader title = "Settings"/>
+            <ScrollView>
+                <SettingItem message = "Accessibility Mode"/>
+            </ScrollView>
         </View>
 
         )
 }
 const styles = StyleSheet.create({
     screen: {
-        flex: 1
+        flex:1
+    },
+    body: {
+        flex: 1,
     }
 })
 export default SettingPage
