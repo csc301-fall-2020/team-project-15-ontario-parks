@@ -11,6 +11,12 @@ To simplify the limit the scope of our problem statement, we focus on providing 
  
 ## Key Features
 
+ * Backend:
+   * By visiting the url https://ontario-park.herokuapp.com/api/attractions, users can retrive the following information
+     * Getting a list of all the tourist attractions
+     * The longitude and latitude of each of the tourist attractions
+     * A description of each of the tourist attractions
+     * A url to the audio file and the image file of each of the tourist attractions
 
  * Described the key features in the application that the user can access
  * Provide a breakdown or detail for each feature that is most appropriate for your application
