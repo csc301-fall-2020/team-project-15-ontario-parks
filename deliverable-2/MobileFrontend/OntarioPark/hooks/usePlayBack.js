@@ -43,7 +43,8 @@ const loadAudio = async (soundObject, audioSource, isPlaying) => {
             uri: audioSource
         };
 
-        await soundObject.loadAsync(source, {shouldPlay: isPlaying}, false);            
+        await soundObject.unloadAsync();
+        await soundObject.loadAsync(source, {shouldPlay: isPlaying}, false);
     } catch (err) {
         console.log(err)
     }
