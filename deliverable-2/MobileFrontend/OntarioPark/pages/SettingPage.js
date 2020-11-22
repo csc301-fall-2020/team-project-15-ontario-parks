@@ -1,13 +1,18 @@
 import React from 'react'
 import { View, StyleSheet, ScrollView } from 'react-native'
-import MapHeader from "../components/Header/MapHeader";
 import SettingHeader from "../components/Header/SettingHeader";
 import SettingItem from "../components/SettingItem";
-const SettingPage = () => {
+const SettingPage = ({ navigation }) => {
+    const goBack = () => {
+        navigation.navigate('Map')
+    }
 
     return (
         <View style={styles.screen}>
-            <SettingHeader title = "Settings"/>
+            <SettingHeader 
+                title = "Settings"
+                handlePress={goBack}    
+            />
             <ScrollView>
                 <SettingItem message = "Accessibility Mode"/>
             </ScrollView>
