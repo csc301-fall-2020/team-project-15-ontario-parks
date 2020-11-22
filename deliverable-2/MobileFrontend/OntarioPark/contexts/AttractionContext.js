@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import backendUrl from '../backendUrl'
+import backendUrl from '../constants/backendUrl'
 import axios from 'axios'
 
 const AttractionContext = React.createContext()

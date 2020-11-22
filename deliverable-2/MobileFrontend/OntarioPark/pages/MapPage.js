@@ -8,7 +8,7 @@ import { AttractionContext } from '../contexts/AttractionContext'
 
 function MapPage({ navigation }) {
     const [ selected, setSelected ] = useState();
-    const [ audio, setAudio ] = useState("http://138.197.141.138/CDGE_A1_Pista30.mp3");
+    const [ audio, setAudio ] = useState("http://138.197.141.138/cherry_blossom.mp3");
     const { setUpdate, attractions, getAttraction} = useContext(AttractionContext)
 
     useEffect(() => {
