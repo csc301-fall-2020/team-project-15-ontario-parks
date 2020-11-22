@@ -22,6 +22,17 @@ function MapPage({ navigation }) {
         navigation.navigate('Setting')
     }
 
+    const goToDetail = (id) => {
+        const attraction = getAttraction(id)
+        if (attraction) {
+            navigation.navigate('Details', {
+                detail: attraction.description,
+                title: attraction.name,
+                imageSource: attraction.image
+            })
+        }
+    }
+
     return(
         <View style={styles.container}>
             <Map
@@ -31,6 +42,7 @@ function MapPage({ navigation }) {
                 longitudeDelta={0.01}
                 locations={attractions}
                 setSelected={setSelected}
+                goToDetail={goToDetail}
             />
             <MapHeader text="Welcome to High Park" />
             <PlayBackButton src={audio} />
