@@ -12,15 +12,15 @@ To simplify the limit the scope of our problem statement, we focus on providing 
 ## Key Features
   * Frontend:
     * Displays points of interests and allows user to choose between them by clicking the markers
-    ![](delieverable-2/demo/ChoosePoint.gif)
+    ![](./demo/ChoosePoint.gif)
     * Provides more knowledge by having a detail page that is accessed by clicking the text pop out after clicking the marker 
-    ![](delieverable-2/demo/DetailPage.gif)
+    ![](./demo/DetailPage.gif)
     * Having a interactive map that allows user to see different part of the park as well as location of infrastructures
-    ![](delieverable-2/demo/Map.gif)
+    ![](./demo/Map.gif)
     * Plays audio of the location by clicking the play button after choosing the marker you want to hear about
-    ![](delieverable-2/demo/PlayAudio.gif)
+    ![](./demo/PlayAudio.gif)
     * Access accessibility page through a choice in the setting
-    ![](delieverable-2/demo/Accessibility.gif)
+    ![](./demo/Accessibility.gif)
 
  * Backend:
    * By visiting the url https://ontario-park.herokuapp.com/api/attractions, users can retrive the following information
