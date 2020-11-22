@@ -43,6 +43,8 @@ To simplify the limit the scope of our problem statement, we focus on providing 
  
  The backend application is hosted on heroku and we currently have one route (get all tourist attractions) that is functioning. If users are interested in accessing the API of our application, they can simply visit https://ontario-park.herokuapp.com/api/attractions. 
  
+ * Note that we did not implement CI/CD for the backend since the backend at the moment is very simple with only one route. We decided to implement CI/CD in Deliverable 3 as the complexity of the backend application increases.
+ 
  * If a developer were to set this up on their machine or a remote server, what are the technical requirements (e.g. OS, libraries, etc.)?
  * Briefly describe instructions for setting up and running the application (think a true README).
  
