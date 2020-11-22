@@ -3,10 +3,10 @@ import { StyleSheet, View, Button } from 'react-native'
 import colors from "../../constants/colors";
 import TitleText from "../TitleText";
 
-const SettingHeader = props => (
+const PageHeader = props => (
     <View style={styles.header}>
         <View style={styles.backView}>
-            <Button title={"back"} onPress={() => {}}/>
+            <Button title={props.buttonTitle} onPress={() => {}}/>
         </View>
         <View style={styles.TitleView}>
             <TitleText>{props.title}</TitleText>
@@ -38,4 +38,4 @@ const styles = StyleSheet.create({
         alignItems: "center",
     }
 })
-export default SettingHeader
+export default PageHeader
