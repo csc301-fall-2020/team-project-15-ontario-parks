@@ -1,31 +1,28 @@
 import React from "react";
 import { View, Text, Image, StyleSheet, ScrollView } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
 
 const DetailsPage = ({ navigation, route }) => {
   return (
-    <SafeAreaView>
-      <ScrollView>
-        <View style={styles.screen}>
-          <View style={styles.titleContainer}>
-            <Text style={styles.titleText}>{route.params.title}</Text>
-          </View>
-
-          <View style={styles.imageContainer}>
-            <Image
-              source={{
-                uri: route.params.imageSource,
-              }}
-              style={styles.image}
-              resizeMode="cover"
-            />
-          </View>
-          <View style={styles.descriptionContainer}>
-            <Text>{route.params.detail}</Text>
-          </View>
+    <ScrollView>
+      <View style={styles.screen}>
+        <View style={styles.titleContainer}>
+          <Text style={styles.titleText}>{route.params.title}</Text>
         </View>
-      </ScrollView>
-    </SafeAreaView>
+
+        <View style={styles.imageContainer}>
+          <Image
+            source={{
+              uri: route.params.imageSource,
+            }}
+            style={styles.image}
+            resizeMode="cover"
+          />
+        </View>
+        <View style={styles.descriptionContainer}>
+          <Text>{route.params.detail}</Text>
+        </View>
+      </View>
+    </ScrollView>
   );
 };
 
