@@ -45,7 +45,7 @@ function MapPage({ navigation }) {
                 goToDetail={goToDetail}
             />
             <MapHeader text="Welcome to High Park" />
-            <PlayBackButton src={audio} style = {{}}/>
+            <PlayBackButton src={audio} style = {{}} size = {100}/>
             <SettingButton handlePress={goToSetting} />
         </View>
     )

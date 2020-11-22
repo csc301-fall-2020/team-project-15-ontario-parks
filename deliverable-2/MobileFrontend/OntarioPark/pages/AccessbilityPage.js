@@ -10,12 +10,12 @@ const AccessibilityPage = () => {
     return (
         <View style={styles.screen}>
             <PageHeader title = "Accessibility Mode" buttonTitle = "Setting"/>
-            <ScrollView style={styles.content}>
+            <View style={styles.content}>
                 {attractions.map(attraction => (
                     <AudioItem key = {attraction._id} title = {attraction.name} audioSrc = {attraction.audio}/>
                 ))
                 }
-            </ScrollView>
+            </View>
         </View>
 
     )
@@ -26,7 +26,9 @@ const styles = StyleSheet.create({
         flex: 1
     },
     content: {
-      padding: 20
+        flex: 1,
+        justifyContent: "space-around",
+        padding: 20,
     }
 })
 export default AccessibilityPage

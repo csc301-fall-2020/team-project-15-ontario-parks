@@ -1,6 +1,6 @@
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import React, { useEffect } from 'react';
-import { StyleSheet,Text, TouchableOpacity } from 'react-native';
+import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import PlayBackButton from "./PlayBack/PlayBackButton";
 import Card from "../components/Card";
 
@@ -8,10 +8,15 @@ const AudioItem = props => {
 
     return(
         <Card style = {styles.card}>
-            <Text style={styles.text}>
-                {props.title}
-            </Text>
-            <PlayBackButton src = {props.audioSrc} style ={styles.playBack}/>
+            <View style={styles.textView}>
+                <Text style={styles.text}>
+                    {props.title}
+                </Text>
+            </View>
+            <View style={styles.playBackView}>
+                <PlayBackButton src = {props.audioSrc} style ={styles.playBack} size = {30}/>
+            </View>
+
         </Card>
     )
 }
@@ -22,15 +27,32 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: "center",
         justifyContent: "space-around",
-        height: 35
+        height: 35,
+        marginBottom: 20
     },
     playBack: {
-        height: 20,
-        width: 20,
+        position: "relative",
+        width: 30,
+        height: 30,
+        justifyContent: 'center',
+        backgroundColor: "white",
+        borderRadius: 50,
+        opacity: 0.8,
+        bottom: 0
+    },
+    textView:{
+        flex:1,
+        alignItems: "center"
+    },
+    playBackView: {
+        flex:1,
+        overflow: "visible",
+        justifyContent: "center",
+        alignItems: "center"
     },
     text: {
         fontFamily: "open-sans",
-        fontSize: 20
+
     }
 })
 
