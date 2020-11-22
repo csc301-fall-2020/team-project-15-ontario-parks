@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import MapView, { Marker, PROVIDER_GOOGLE } from 'react-native-maps'
-import { StyleSheet } from 'react-native'
+import MapView, { Callout, Marker, PROVIDER_GOOGLE } from 'react-native-maps'
+import { StyleSheet, Text } from 'react-native'
 
 function Map(props) {
     const mapRegion = {
@@ -23,7 +23,13 @@ function Map(props) {
                 onPress={() => {
                     props.setSelected(location._id)
                 }}
-            />             
+            >
+                <Callout onPress={() => props.goToDetail(location._id)}>
+                    <Text>
+                        {location.name}
+                    </Text>
+                </Callout>
+            </Marker>             
         )))
     }, [props.locations])
 
