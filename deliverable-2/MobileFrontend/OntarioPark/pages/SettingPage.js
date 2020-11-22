@@ -12,7 +12,6 @@ const SettingPage = ({ navigation }) => {
     const { inAccessibilityMode, setInAccessibilityMode } = useContext(AccessibilityContext)
 
     const toggleAccessibility = () => {
-        console.log(inAccessibilityMode)
         setInAccessibilityMode(prevInAccessibilityMode => !prevInAccessibilityMode)
     }
 
