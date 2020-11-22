@@ -10,7 +10,7 @@ const SettingItem = (props) => {
             <Text style={styles.text}>
                 {props.message}
             </Text>
-            <SwitchButton/>
+            <SwitchButton value={props.isEnabled} toggleSwitch={props.toggleSwitch} />
         </View>
     )
 }

@@ -7,9 +7,11 @@ import { AppLoading } from "expo";
 import SettingPage from "./pages/SettingPage";
 import MapPage from "./pages/MapPage";
 import DetailsPage from "./pages/DetailsPage";
+import AccessibilityPage from "./pages/AccessbilityPage";
 import * as Font from "expo-font";
 
 import { AttractionContextProvider } from "./contexts/AttractionContext";
+import { AccessibilityContextProvider } from "./contexts/AccessibilityContext";
 
 const fetchFonts = () => {
   return Font.loadAsync({
@@ -34,22 +36,25 @@ const App = () => {
   return (
     <SafeAreaProvider>
       <AttractionContextProvider>
-        <NavigationContainer>
-          <Stack.Navigator
-            initialRouteName="Map"
-            screenOptions={{
-              headerShown: false,
-            }}
-          >
-            <Stack.Screen name="Map" component={MapPage} />
-            <Stack.Screen name="Setting" component={SettingPage} />
-            <Stack.Screen
-              name="Details"
-              component={DetailsPage}
-              options={{ headerShown: true }}
-            />
-          </Stack.Navigator>
-        </NavigationContainer>
+        <AccessibilityContextProvider>
+          <NavigationContainer>
+            <Stack.Navigator
+              initialRouteName="Map"
+              screenOptions={{
+                headerShown: false,
+              }}
+            >
+              <Stack.Screen name="Map" component={MapPage} />
+              <Stack.Screen name="Setting" component={SettingPage} />
+              <Stack.Screen
+                name="Details"
+                component={DetailsPage}
+                options={{ headerShown: true }}
+              />
+              <Stack.Screen name="Accessibility" component={AccessibilityPage} />
+            </Stack.Navigator>
+          </NavigationContainer>          
+        </AccessibilityContextProvider>
       </AttractionContextProvider>
     </SafeAreaProvider>
   );
