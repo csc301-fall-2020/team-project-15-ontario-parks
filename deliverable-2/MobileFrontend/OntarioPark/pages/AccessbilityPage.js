@@ -4,7 +4,10 @@ import PageHeader from "../components/Header/PageHeader";
 import { AttractionContext } from '../contexts/AttractionContext'
 import AudioItem from "../components/AudioItem";
 
-
+/**
+ *
+ a page for visually impaired users
+ */
 
 const AccessibilityPage = ({ navigation }) => {
     const { setUpdate, attractions, getAttraction} = useContext(AttractionContext)
