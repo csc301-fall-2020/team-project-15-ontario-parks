@@ -1,29 +1,31 @@
 import React from "react";
 import { View, Text, Image, StyleSheet, ScrollView } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const DetailsPage = ({ navigation, route }) => {
   return (
-    <ScrollView>
-      <View style={styles.screen}>
-        <View style={styles.titleContainer}>
-          <Text style={styles.titleText}>Title Text</Text>
-        </View>
+    <SafeAreaView>
+      <ScrollView>
+        <View style={styles.screen}>
+          <View style={styles.titleContainer}>
+            <Text style={styles.titleText}>{route.params.title}</Text>
+          </View>
 
-        <View style={styles.imageContainer}>
-          <Image
-            source={{
-              uri:
-                "https://images.thestar.com/94hUqxqULxO_6DkLuGlGtybCMeo=/1086x724/smart/filters:cb(1589149873510)/https://www.thestar.com/content/dam/thestar/news/canada/2020/05/09/more-than-500-ontario-parks-and-conservation-areas-will-reopen-monday/tab_na_enviro3_002.jpg",
-            }}
-            style={styles.image}
-            resizeMode="cover"
-          />
+          <View style={styles.imageContainer}>
+            <Image
+              source={{
+                uri: route.params.imageSource,
+              }}
+              style={styles.image}
+              resizeMode="cover"
+            />
+          </View>
+          <View style={styles.descriptionContainer}>
+            <Text>{route.params.detail}</Text>
+          </View>
         </View>
-        <View style={styles.descriptionContainer}>
-          <Text>{route.params.detail}</Text>
-        </View>
-      </View>
-    </ScrollView>
+      </ScrollView>
+    </SafeAreaView>
   );
 };
 

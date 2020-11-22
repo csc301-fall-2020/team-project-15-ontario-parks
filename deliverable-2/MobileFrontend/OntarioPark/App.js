@@ -43,7 +43,11 @@ const App = () => {
           >
             <Stack.Screen name="Map" component={MapPage} />
             <Stack.Screen name="Setting" component={SettingPage} />
-            <Stack.Screen name="Details" component={DetailsPage} />
+            <Stack.Screen
+              name="Details"
+              component={DetailsPage}
+              options={{ headerShown: true }}
+            />
           </Stack.Navigator>
         </NavigationContainer>
       </AttractionContextProvider>
