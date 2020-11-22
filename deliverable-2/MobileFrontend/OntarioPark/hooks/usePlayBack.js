@@ -4,6 +4,9 @@ import { useEffect, useState } from 'react';
 
 
 function usePlayBack(src) {
+    /**
+     * Custom hook for audio playback
+     */
     Audio.setAudioModeAsync({
         allowsRecordingIOS: false,
         staysActiveInBackground: true,
@@ -14,7 +17,7 @@ function usePlayBack(src) {
     
     const [playing, setPlaying] = useState(false);
     const [audioSource, setAudioSource] = useState(src);
-    const [soundObject, setSoundObject] = useState(new Audio.Sound());
+    const [soundObject] = useState(new Audio.Sound());
 
     // Updates playing state when status changes
     soundObject.setOnPlaybackStatusUpdate(AVPlaybackStatus => {
@@ -38,6 +41,9 @@ function usePlayBack(src) {
 
 
 const loadAudio = async (soundObject, audioSource, isPlaying) => {
+    /**
+     * Loads the audio into the soundObject
+     */
     try {
         const source = {
             uri: audioSource
@@ -52,6 +58,9 @@ const loadAudio = async (soundObject, audioSource, isPlaying) => {
 
 
 const togglePlaying = async (soundObject, isPlaying) => {
+    /**
+     * Plays and pauses the audio playback
+     */
     try {
         if (isPlaying) {
             // await soundObject.playAsync();

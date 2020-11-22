@@ -5,9 +5,13 @@ import axios from 'axios'
 const AttractionContext = React.createContext()
 
 function AttractionContextProvider(props) {
+    /**
+     * Context for interacting with server and fetch data
+     */
     const [ attractions, setAttractions ] = useState([])
     const [ update, setUpdate ] = useState(true)
 
+    // Returns the attraction with the provided id
     const getAttraction = (id) => {
         return attractions.find(attraction => attraction._id == id)
     }

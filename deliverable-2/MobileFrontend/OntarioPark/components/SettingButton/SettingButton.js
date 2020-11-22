@@ -1,5 +1,5 @@
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import React, { useEffect } from 'react';
+import React from 'react';
 import { StyleSheet, TouchableOpacity } from 'react-native';
 
 function SettingButton(props) {

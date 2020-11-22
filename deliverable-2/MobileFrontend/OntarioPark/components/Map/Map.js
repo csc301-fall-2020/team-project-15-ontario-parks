@@ -3,14 +3,20 @@ import MapView, { Callout, Marker, PROVIDER_GOOGLE } from 'react-native-maps'
 import { StyleSheet, Text } from 'react-native'
 
 function Map(props) {
+    /**
+     * A Map View displaying Marker on locations provided
+     */
+
+    // The initial region that is displayed on user's screen 
     const mapRegion = {
         latitude: parseFloat(props.latitude),
         longitude: parseFloat(props.longitude),
         latitudeDelta: parseFloat(props.latitudeDelta),
         longitudeDelta: parseFloat(props.longitudeDelta)
     }
-    const [ markers, setMakers ] = useState([])
 
+    // Creating Markers to be displayed on the user's screen
+    const [ markers, setMakers ] = useState([])
     useEffect(() => {
         setMakers(props.locations.map((location, index) => (
             <Marker 

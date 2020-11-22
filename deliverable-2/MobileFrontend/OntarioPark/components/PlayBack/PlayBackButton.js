@@ -4,10 +4,16 @@ import { StyleSheet, TouchableOpacity } from 'react-native';
 import usePlayBack from '../../hooks/usePlayBack';
 
 function PlayBackButton(props) {
+    /**
+     * A button used to playback audio when pressed
+     */
+    
+    //  If the music is playing
     const { isPlaying, setIsPlaying, setAudioSource } = usePlayBack(props.src)
     
     const handlePress = () => setIsPlaying(!isPlaying);
 
+    // Update audio source when changed
     useEffect(() => {
         setAudioSource(props.src)
     }, [props.src])
