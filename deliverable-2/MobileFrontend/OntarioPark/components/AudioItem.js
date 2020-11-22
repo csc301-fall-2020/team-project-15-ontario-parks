@@ -4,6 +4,9 @@ import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import PlayBackButton from "./PlayBack/PlayBackButton";
 import Card from "../components/Card";
 
+/**
+ a component represent for each audio item inside accessibility page
+ */
 const AudioItem = props => {
 
     return(

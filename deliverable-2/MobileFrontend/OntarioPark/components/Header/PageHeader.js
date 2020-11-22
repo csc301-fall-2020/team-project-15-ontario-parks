@@ -1,3 +1,7 @@
+
+/**
+ a page header represent the title of the page and a functional button
+ */
 import React, { useState } from 'react'
 import { StyleSheet, View } from 'react-native'
 import colors from "../../constants/colors";

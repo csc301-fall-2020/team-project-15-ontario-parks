@@ -2,6 +2,11 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import React from 'react';
 import { StyleSheet, TouchableOpacity } from 'react-native';
 
+/**
+ *
+a user defined button to replace the build in button component
+ */
+
 function SettingButton(props) {
     return(
         <TouchableOpacity style={styles.button} >

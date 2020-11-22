@@ -1,6 +1,10 @@
 import React, {useState} from "react";
 import { Switch } from "react-native";
 
+/**
+ *
+ the switch button for switching on or off
+ */
 
 const SwitchButton = (props) => {
     return (

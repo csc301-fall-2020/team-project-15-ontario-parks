@@ -2,6 +2,10 @@ import React, {useState} from "react";
 import {View, StyleSheet, Text} from "react-native";
 import SwitchButton from "./SwitchButton";
 
+/**
+ *
+a setting line represent each setting component in setting page
+ */
 const SettingItem = (props) => {
 
 

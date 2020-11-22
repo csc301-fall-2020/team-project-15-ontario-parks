@@ -1,3 +1,6 @@
+/**
+ * a setting page for the mp application
+ */
 import React, { useContext } from 'react'
 import { View, StyleSheet, ScrollView } from 'react-native'
 import PageHeader from "../components/Header/PageHeader";
