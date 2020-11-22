@@ -6,7 +6,8 @@ import TitleText from "../TitleText";
 const PageHeader = props => (
     <View style={styles.header}>
         <View style={styles.backView}>
-            <Button title={props.buttonTitle} onPress={() => {}}/>
+            <Button title={props.buttonTitle} onPress={props.handlePress}/>
+
         </View>
         <View style={styles.TitleView}>
             <TitleText>{props.title}</TitleText>

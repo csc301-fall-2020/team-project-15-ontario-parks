@@ -4,10 +4,10 @@ import { StyleSheet } from 'react-native'
 
 function Map(props) {
     const mapRegion = {
-        latitude: props.latitude,
-        longitude: props.longitude,
-        latitudeDelta: props.latitudeDelta,
-        longitudeDelta: props.longitudeDelta
+        latitude: parseFloat(props.latitude),
+        longitude: parseFloat(props.longitude),
+        latitudeDelta: parseFloat(props.latitudeDelta),
+        longitudeDelta: parseFloat(props.longitudeDelta)
     }
     const [ markers, setMakers ] = useState([])
 
@@ -17,8 +17,8 @@ function Map(props) {
                 title={location.name} 
                 key={index}
                 coordinate={{
-                    longitude: location.longitude,
-                    latitude: location.latitude
+                    longitude: parseFloat(location.longitude),
+                    latitude: parseFloat(location.latitude)
                 }}
                 onPress={() => {
                     props.setSelected(location._id)
