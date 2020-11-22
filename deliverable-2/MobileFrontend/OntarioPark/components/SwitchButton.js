@@ -9,7 +9,7 @@ const SwitchButton = (props) => {
                 thumbColor={props.isEnabled ? "#f4f3f4" : "#f4f3f4"}
                 ios_backgroundColor="#3e3e3e"
                 onValueChange={props.toggleSwitch}
-                value={props.isEnabled}
+                value={props.value}
             />
     );
 }
