@@ -5,11 +5,15 @@ import { AttractionContext } from '../contexts/AttractionContext'
 import AudioItem from "../components/AudioItem";
 
 
-const AccessibilityPage = () => {
+
+const AccessibilityPage = ({ navigation }) => {
     const { setUpdate, attractions, getAttraction} = useContext(AttractionContext)
+    const goToSetting = () => {
+        navigation.navigate('Setting')
+    }
     return (
         <View style={styles.screen}>
-            <PageHeader title = "Accessibility Mode" buttonTitle = "Setting"/>
+            <PageHeader title = "Accessibility Mode" buttonTitle = "Setting" handlePress = {goToSetting}/>
             <View style={styles.content}>
                 {attractions.map(attraction => (
                     <AudioItem key = {attraction._id} title = {attraction.name} audioSrc = {attraction.audio}/>
