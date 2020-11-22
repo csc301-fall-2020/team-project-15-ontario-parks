@@ -13,7 +13,7 @@ function PlayBackButton(props) {
     }, [props.src])
 
     return(
-        <TouchableOpacity style={styles.button} >
+        <TouchableOpacity style={{...styles.button, ...props.style}} >
             <Icon 
                 name={isPlaying ? "pause-circle-filled" : "play-circle-filled"} 
                 size={100} 

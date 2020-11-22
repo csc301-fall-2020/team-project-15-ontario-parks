@@ -33,7 +33,7 @@ function MapPage({ navigation }) {
                 setSelected={setSelected}
             />
             <MapHeader text="Welcome to High Park" />
-            <PlayBackButton src={audio} />
+            <PlayBackButton src={audio} style = {{}}/>
             <SettingButton handlePress={goToSetting} />
         </View>
     )
