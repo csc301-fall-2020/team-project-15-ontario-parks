@@ -1,5 +1,6 @@
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import React, { useEffect } from 'react';
+import { useFocusEffect } from '@react-navigation/native';
 import { StyleSheet, TouchableOpacity } from 'react-native';
 import usePlayBack from '../../hooks/usePlayBack';
 
@@ -17,6 +18,15 @@ function PlayBackButton(props) {
     useEffect(() => {
         setAudioSource(props.src)
     }, [props.src])
+
+    // Stop the audio when page changed
+    useFocusEffect(
+        React.useCallback(() => {
+            return () => {
+                setIsPlaying(false)
+            }      
+        }, [])
+    )
 
     return(
         <TouchableOpacity style={{...styles.button, ...props.style}} >
