@@ -19,7 +19,7 @@ To simplify the limit the scope of our problem statement, we focus on providing 
     ![](./demo/Map.gif)
     * Plays audio of the location by clicking the play button after choosing the marker you want to hear about <br />
     ![](./demo/PlayAudio.gif)
-    * Access accessibility page through a choice in the setting
+    * Access accessibility page through a choice in the setting <br />
     ![](./demo/Accessibility.gif)
 
  * Backend:

@@ -9,6 +9,8 @@
       "**/*"
     ],
     "android": {
+      "package": "com.OntarioParks",
+      "versionCode": 1,
       "config": {
         "googleMaps": {
           "apiKey": "AIzaSyBcyBilxbGrMSFxznVyvXq3dcYzdb2A5Tk"
@@ -16,7 +18,8 @@
       }
     },
     "ios": {
-      "bundleIdentifier": "OntarioPark",
+      "bundleIdentifier": "com.OntarioParks",
+      "buildNumber": "1.0.0",
       "config": {
           "googleMapsApiKey": "AIzaSyBcyBilxbGrMSFxznVyvXq3dcYzdb2A5Tk"
       }
