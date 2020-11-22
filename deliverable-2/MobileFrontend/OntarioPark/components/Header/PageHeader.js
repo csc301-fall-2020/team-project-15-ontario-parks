@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
-import { StyleSheet, View, Button } from 'react-native'
+import { StyleSheet, View } from 'react-native'
 import colors from "../../constants/colors";
 import TitleText from "../TitleText";
-
+import HeaderButton from "../HeaderButton";
 const PageHeader = props => (
     <View style={styles.header}>
         <View style={styles.backView}>
-            <Button title={props.buttonTitle} onPress={props.handlePress}/>
+            <HeaderButton onPress={props.handlePress}> {props.buttonTitle}</HeaderButton>
 
         </View>
         <View style={styles.TitleView}>
