@@ -1,19 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { SafeAreaProvider } from "react-native-safe-area-context";
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-import {AppLoading} from "expo";
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
+import { AppLoading } from "expo";
 
 import SettingPage from "./pages/SettingPage";
 import MapPage from "./pages/MapPage";
+import DetailsPage from "./pages/DetailsPage";
 import * as Font from "expo-font";
 
-import { AttractionContextProvider } from './contexts/AttractionContext'
+import { AttractionContextProvider } from "./contexts/AttractionContext";
 
 const fetchFonts = () => {
   return Font.loadAsync({
-    'open-sans': require('./assets/fonts/OpenSans-Regular.ttf'),
-    'open-sans-bold': require('./assets/fonts/OpenSans-Bold.ttf')
+    "open-sans": require("./assets/fonts/OpenSans-Regular.ttf"),
+    "open-sans-bold": require("./assets/fonts/OpenSans-Bold.ttf"),
   });
 };
 
@@ -23,32 +24,26 @@ const App = () => {
 
   if (!dataLoaded) {
     return (
-        <AppLoading
-            startAsync={fetchFonts}
-            onFinish={() => setDataLoaded(true)}
-            onError={(err) => console.log(err)}
-        />
+      <AppLoading
+        startAsync={fetchFonts}
+        onFinish={() => setDataLoaded(true)}
+        onError={(err) => console.log(err)}
+      />
     );
   }
   return (
     <SafeAreaProvider>
       <AttractionContextProvider>
         <NavigationContainer>
-          <Stack.Navigator 
+          <Stack.Navigator
             initialRouteName="Map"
             screenOptions={{
-              headerShown: false
+              headerShown: false,
             }}
           >
-            <Stack.Screen 
-              name="Map"
-              component={MapPage}
-            />
-            
-            <Stack.Screen 
-              name="Setting"
-              component={SettingPage}
-            />
+            <Stack.Screen name="Map" component={MapPage} />
+            <Stack.Screen name="Setting" component={SettingPage} />
+            <Stack.Screen name="Details" component={DetailsPage} />
           </Stack.Navigator>
         </NavigationContainer>
       </AttractionContextProvider>
