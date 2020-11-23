@@ -43,18 +43,49 @@ To simplify the limit the scope of our problem statement, we focus on providing 
  * Provide clear steps for using each feature described above
  * This section is critical to testing your application and must be done carefully and thoughtfully
  
- ## Development requirements
+ ### Development requirements
+ Development Requirements
+ ### Front End Development Installing
+ **developer need to do installation both on the mobile device and PC to run the application**.
  
- * Backend:
+ #### Installation on laptop
+ install Node js in the local machine.
+ ```
+ https://nodejs.org/en/download/
+ ```
+ install expo in the local machine (Windows):
+ ```
+ npm install expo-cli --global
+ ```
+ install expo in the local machine (Linux/MacOS):
+ ```
+ sudo npm install expo-cli --global
+ ```
+ 
+ Clone this repository to local machine.
+ ```
+ https://github.com/csc301-fall-2020/team-project-15-ontario-parks.git
+ ```
+ change directory on terminal to the project front end location and run npm i to install all the dependency.
+ ```
+ cd <project_location>
+ cd ./deliverable-2/MobileFrontend/OntarioPark
+ npm i
+ ```
+ 
+ ### Installing on mobile device
+ **ios device:**
+  - open app store on the device and download *Expo Client*.
+ 
+ **android device:**
+  - open Google Play store on the device and download *Expo*.
+
+ ### Backend Development Installing:
    * Install Node.js on your local machine.
    * Step into the backend project directory and run `npm install` in terminal
    * Run `npm start` in terminal
- 
- * Note that we did not implement CI/CD for the backend since the backend at the moment is very simple with only one route. We decided to implement CI/CD in Deliverable 3 as the complexity of the backend application increases.
- 
- * If a developer were to set this up on their machine or a remote server, what are the technical requirements (e.g. OS, libraries, etc.)?
- * Briefly describe instructions for setting up and running the application (think a true README).
- 
+  
+  
  ## Deployment and Github Workflow
  
   * Frontend:
@@ -69,6 +100,8 @@ To simplify the limit the scope of our problem statement, we focus on providing 
 
       We chose the workflow using pull request because it adds another guard towards erroneous code and prevents it from merging into more important branches. However, this is also why we did not employ it for the same reason as we are all writing code that are interdependent. We used Expo for our deployment because it offers features such as ability to see the update to the application directly on the phone that substantially improves our efficiency when making changes.
 
+    
+    
   * Backend:
   
       Each team member in the backend team is responsible for handling one portion of the backend application. Ka Chun Mo first setup the code and the folder structure of the backend application, connected the application to our database (MongoDB), and hosted the application on heroku. Zhiyuan Sun then implemented the API of our application. Wang Ting Shu is responsible for setting up the crucial part of storing our audio and image files in our DigitalOcean server. Since we divided our tasks in a sequential manner, there is no conflicts in our backend applications.
