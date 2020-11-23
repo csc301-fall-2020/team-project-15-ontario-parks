@@ -43,7 +43,7 @@ To simplify the limit the scope of our problem statement, we focus on providing 
  * Provide clear steps for using each feature described above
  * This section is critical to testing your application and must be done carefully and thoughtfully
  
- ### Development requirements
+ ## Development requirements
  Development Requirements
  ### Front End Development Installing
  **developer need to do installation both on the mobile device and PC to run the application**.
