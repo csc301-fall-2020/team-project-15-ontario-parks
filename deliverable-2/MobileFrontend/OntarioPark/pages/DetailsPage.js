@@ -1,14 +1,17 @@
 import React from "react";
 import { View, Text, Image, StyleSheet, ScrollView } from "react-native";
 
+/* A detail page that provides more information about the infrastructure. */
+
 const DetailsPage = ({ navigation, route }) => {
   return (
     <ScrollView>
       <View style={styles.screen}>
+        {/* dsplays the name of the infrastructure */}
         <View style={styles.titleContainer}>
           <Text style={styles.titleText}>{route.params.title}</Text>
         </View>
-
+        {/* dsplays an image of the infrastructure */}
         <View style={styles.imageContainer}>
           <Image
             source={{
@@ -18,6 +21,7 @@ const DetailsPage = ({ navigation, route }) => {
             resizeMode="cover"
           />
         </View>
+        {/* dsplays a description of the infrastructure */}
         <View style={styles.descriptionContainer}>
           <Text>{route.params.detail}</Text>
         </View>
