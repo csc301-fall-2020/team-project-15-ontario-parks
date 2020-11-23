@@ -116,8 +116,6 @@ Describe your Git / GitHub workflow. Essentially, we want to understand how your
 
  ## Licenses 
 
- Keep this section as brief as possible. You may read this [Github article](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/licensing-a-repository) for a start.
-
- * What type of license will you apply to your codebase?
- * What affect does it have on the development and use of your codebase?
- * Why did you or your partner make this choice?
+ * Currently we choose not to have an open source licence because of two reasons:
+      Our partner is not in the tech industry and may not understand the implication of open sourcing. 
+      Ontario Parks is a government institution and we do not understand the requirements and implication of this fact on open sourcing. 
