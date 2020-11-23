@@ -2,7 +2,7 @@
 
 ## Description 
 
-Ontario Park is a geo-audio and realtime-locating mobile application that provides natural, cultural, and historical information and anomalies of Ontario parks based users’ interest. Our application aims to solve the problem of a lack of access of informatino of your surrounding when you are walking in parks.
+Ontario Park is a geo-audio and realtime-locating mobile application that provides natural, cultural, and historical information and anomalies of Ontario parks based users’ interest. Our application aims to solve the problem of a lack of access of information of your surrounding when you are walking in parks.
 
 Imagine walking in a part and seeing a beautiful plant or am amazing architecture but you have no resource to learn about what is that beautiful plant or what is the background story of that amazing architecture. Our application will provide you with that information as you are walking in the park!
 
@@ -14,13 +14,13 @@ To simplify the limit the scope of our problem statement, we focus on providing 
   * Frontend:
     * Displays points of interests and allows user to choose between them by clicking the markers <br />
     ![](./demo/ChoosePoint.gif)
-    * Provides more knowledge by having a detail page that is accessed by clicking the text pop out after clicking the marker <br />
+    * Provides more knowledge by having a detail page <br />
     ![](./demo/DetailPage.gif)
     * Having a interactive map that allows user to see different part of the park as well as location of infrastructures <br />
     ![](./demo/Map.gif)
-    * Plays audio of the location by clicking the play button after choosing the marker you want to hear about <br />
+    * Plays audio of the location by clicking play after choosing the marker you want to hear about <br />
     ![](./demo/PlayAudio.gif)
-    * Access accessibility page through a choice in the setting <br />
+    * Access accessibility mode through a choice in the setting <br />
     ![](./demo/Accessibility.gif)
 
  * Backend:
@@ -29,10 +29,6 @@ To simplify the limit the scope of our problem statement, we focus on providing 
      * The longitude and latitude of each of the tourist attractions
      * A description of each of the tourist attractions
      * A url to the audio file and the image file of each of the tourist attractions
-
- * Described the key features in the application that the user can access
- * Provide a breakdown or detail for each feature that is most appropriate for your application
- * This section will be used to assess the value of the features built
 
 ## Instructions
 
@@ -44,11 +40,11 @@ To simplify the limit the scope of our problem statement, we focus on providing 
  * This section is critical to testing your application and must be done carefully and thoughtfully
  
  ## Development requirements
- Development Requirements
+
  ### Front End Development Installing
  **developer need to do installation both on the mobile device and PC to run the application**.
  
- #### Installation on laptop
+ #### Installation on PC
  install Node js in the local machine.
  ```
  https://nodejs.org/en/download/
@@ -105,14 +101,6 @@ To simplify the limit the scope of our problem statement, we focus on providing 
   * Backend:
   
       Each team member in the backend team is responsible for handling one portion of the backend application. Ka Chun Mo first setup the code and the folder structure of the backend application, connected the application to our database (MongoDB), and hosted the application on heroku. Zhiyuan Sun then implemented the API of our application. Wang Ting Shu is responsible for setting up the crucial part of storing our audio and image files in our DigitalOcean server. Since we divided our tasks in a sequential manner, there is no conflicts in our backend applications.
-
-Describe your Git / GitHub workflow. Essentially, we want to understand how your team members shares a codebase, avoid conflicts and deploys the application.
-
- * Be concise, yet precise. For example, "we use pull-requests" is not a precise statement since it leaves too many open questions - Pull-requests from where to where? Who reviews the pull-requests? Who is responsible for merging them? etc.
- * If applicable, specify any naming conventions or standards you decide to adopt.
- * Describe your overall deployment process from writing code to viewing a live applicatioon
- * What deployment tool(s) are you using and how
- * Don't forget to **briefly explain why** you chose this workflow or particular aspects of it!
 
  ## Licenses 
 
