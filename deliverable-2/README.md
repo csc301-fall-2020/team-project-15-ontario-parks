@@ -34,6 +34,9 @@ To simplify the limit the scope of our problem statement, we focus on providing 
  * This section will be used to assess the value of the features built
 
 ## Instructions
+
+ The backend application is hosted on heroku and we currently have one route (get all tourist attractions) that is functioning. If users are interested in accessing the API of our application, they can simply visit https://ontario-park.herokuapp.com/api/attractions. 
+
  * Clear instructions for how to use the application from the end-user's perspective
  * How do you access it? Are accounts pre-created or does a user register? Where do you start? etc. 
  * Provide clear steps for using each feature described above
@@ -41,7 +44,10 @@ To simplify the limit the scope of our problem statement, we focus on providing 
  
  ## Development requirements
  
- The backend application is hosted on heroku and we currently have one route (get all tourist attractions) that is functioning. If users are interested in accessing the API of our application, they can simply visit https://ontario-park.herokuapp.com/api/attractions. 
+ * Backend:
+   * Install Node.js on your local machine.
+   * Step into the backend project directory and run `npm install` in terminal
+   * Run `npm start` in terminal
  
  * Note that we did not implement CI/CD for the backend since the backend at the moment is very simple with only one route. We decided to implement CI/CD in Deliverable 3 as the complexity of the backend application increases.
  
