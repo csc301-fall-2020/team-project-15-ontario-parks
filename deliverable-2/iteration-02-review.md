@@ -26,7 +26,7 @@
     
     We consider this decision (the devision of tasks) as successful because everyone participates in an indispensible part during the whole development process. Overall, every team member completes their own tasks on time. Everyone takes part in a crucial portion of the application and everyone takes ownership of the features they are responsible for. 
     
-    * Frontend: Calvin Yu is responsible for building the map page. Sherry is responsible for the detail page. 
+    * Frontend: Calvin Yu is responsible for building the map page. Sherry is responsible for the detail page. Yingke is responsible for building the setting page and accessibility page. 
     
     * Backend: Ka Chun is responsible for setting up the code and folder structure of the backend application, connecting the backend application to the our database (MongoDB), and deploying the application via Heroku. Zhiyuan Sun is responsible for designing and implementing the API which is an important part for the communication of our frontend application. Shu Ting Wang is responsible for setting up the server for storing our audio and image files which is crucial since the whole idea of our application is based on the idea of building a Geo-**Audio** application.
 
