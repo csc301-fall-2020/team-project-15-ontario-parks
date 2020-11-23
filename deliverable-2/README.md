@@ -35,6 +35,9 @@ To simplify the limit the scope of our problem statement, we focus on providing 
  * This section will be used to assess the value of the features built
 
 ## Instructions
+
+ The backend application is hosted on heroku and we currently have one route (get all tourist attractions) that is functioning. If users are interested in accessing the API of our application, they can simply visit https://ontario-park.herokuapp.com/api/attractions. 
+
  * Clear instructions for how to use the application from the end-user's perspective
  * How do you access it? Are accounts pre-created or does a user register? Where do you start? etc. 
  * Provide clear steps for using each feature described above
@@ -42,7 +45,10 @@ To simplify the limit the scope of our problem statement, we focus on providing 
  
  ## Development requirements
  
- The backend application is hosted on heroku and we currently have one route (get all tourist attractions) that is functioning. If users are interested in accessing the API of our application, they can simply visit https://ontario-park.herokuapp.com/api/attractions. 
+ * Backend:
+   * Install Node.js on your local machine.
+   * Step into the backend project directory and run `npm install` in terminal
+   * Run `npm start` in terminal
  
  * Note that we did not implement CI/CD for the backend since the backend at the moment is very simple with only one route. We decided to implement CI/CD in Deliverable 3 as the complexity of the backend application increases.
  
@@ -55,7 +61,7 @@ To simplify the limit the scope of our problem statement, we focus on providing 
  
   * Backend:
   
-      Each team member in the backend team is responsible for handling one portion of the backend application. Ka Chun Mo first setup the code and the folder structure of the backend application, connected the application to our database (MongoDB), and hosted the application on heroku. Zhiyuan Lu then implemented the API of our application. Wang Ting Shu is responsible for setting up the crucial part of storing our audio and image files in our DigitalOcean server. Since we divided our tasks in a sequential manner, there is no conflicts in our backend applications.
+      Each team member in the backend team is responsible for handling one portion of the backend application. Ka Chun Mo first setup the code and the folder structure of the backend application, connected the application to our database (MongoDB), and hosted the application on heroku. Zhiyuan Sun then implemented the API of our application. Wang Ting Shu is responsible for setting up the crucial part of storing our audio and image files in our DigitalOcean server. Since we divided our tasks in a sequential manner, there is no conflicts in our backend applications.
 
 Describe your Git / GitHub workflow. Essentially, we want to understand how your team members shares a codebase, avoid conflicts and deploys the application.
 
