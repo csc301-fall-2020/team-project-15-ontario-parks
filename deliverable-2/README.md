@@ -34,11 +34,6 @@ To simplify the limit the scope of our problem statement, we focus on providing 
 
 The backend application is hosted on heroku and we currently have one route (get all tourist attractions) that is functioning. If users are interested in accessing the API of our application, they can simply visit https://ontario-park.herokuapp.com/api/attractions.
 
-- Clear instructions for how to use the application from the end-user's perspective
-- How do you access it? Are accounts pre-created or does a user register? Where do you start? etc.
-- Provide clear steps for using each feature described above
-- This section is critical to testing your application and must be done carefully and thoughtfully
-
 An APK file called Phase-2.apk has already been generated and placed at the deliverable-2 directory for you to load on an Android device.
 
 ### Map Page (Home page)
