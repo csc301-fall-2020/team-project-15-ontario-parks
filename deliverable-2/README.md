@@ -59,15 +59,15 @@ To simplify the limit the scope of our problem statement, we focus on providing 
  
   * Frontend:
   
- We made a branch called MobileUI where the mobile frontend development takes place. Each member in the frontend team is responsible for one or two screens and we allocate the rest of the work(such as connection with backend) in a case by case manner. This allows us to prevent conflicts since we are working on different part of the same code base. 
+      We made a branch called MobileUI where the mobile frontend development takes place. Each member in the frontend team is responsible for one or two screens and we allocate the rest of the work(such as connection with backend) in a case by case manner. This allows us to prevent conflicts since we are working on different part of the same code base. 
  
-We tried to make pull requests on the MobileUI branch for parts and any other team member who reviews the code can merge it. However, we are not able to continue using this because of our time constraint and because all of our components are closely related and need to interact between each other. We are planning to adopt the workflow described above in Phase 3 as we will be adding new features rather than creating everything all at once. 
+      We tried to make pull requests on the MobileUI branch for parts and any other team member who reviews the code can merge it. However, we are not able to continue using this because of our time constraint and because all of our components are closely related and need to interact between each other. We are planning to adopt the workflow described above in Phase 3 as we will be adding new features rather than creating everything all at once. 
 
-We chose camel case for our naming as this is the standard for javascript. 
+      We chose camel case for our naming as this is the standard for javascript. 
 
-As we are developing React Native application using Expo, we are able to view the live application as we are writing and modifying the code and that is our deployment process when writing code. Expo also acts as a package manager and provides us the ability to link resources automatically and provide service for building and deploying the application as an apk file. We only use Expo to deploy to apk when we are finished because, as stated above, we are able to see live updates on our simulator/device when developing.  
+      As we are developing React Native application using Expo, we are able to view the live application as we are writing and modifying the code and that is our deployment process when writing code. Expo also acts as a package manager and provides us the ability to link resources automatically and provide service for building and deploying the application as an apk file. We only use Expo to deploy to apk when we are finished because, as stated above, we are able to see live updates on our simulator/device when developing.  
 
-We chose the workflow using pull request because it adds another guard towards erroneous code and prevents it from merging into more important branches. However, this is also why we did not employ it for the same reason as we are all writing code that are interdependent. We used Expo for our deployment because it offers features such as ability to see the update to the application directly on the phone that substantially improves our efficiency when making changes.
+      We chose the workflow using pull request because it adds another guard towards erroneous code and prevents it from merging into more important branches. However, this is also why we did not employ it for the same reason as we are all writing code that are interdependent. We used Expo for our deployment because it offers features such as ability to see the update to the application directly on the phone that substantially improves our efficiency when making changes.
 
   * Backend:
   
