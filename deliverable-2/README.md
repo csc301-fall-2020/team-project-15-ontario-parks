@@ -179,5 +179,7 @@ npm i
 ## Licenses
 
 - Currently we choose not to have an open source licence because of two reasons:
+
   Our partner is not in the tech industry and may not understand the implication of open sourcing.
+  
   Ontario Parks is a government institution and we do not understand the requirements and implication of this fact on open sourcing.

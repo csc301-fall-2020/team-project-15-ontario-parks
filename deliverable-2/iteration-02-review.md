@@ -22,11 +22,11 @@
 
  * Division of tasks
  
-    With a project of this scale, we have to break down our expectation of our product into manageble and doable components. We separate the tasks of our project   into two parts - frontend and backend. Calvin Yu, Yingke Wang, and Sherry are responsible for completing the frontend of our application. Ka Chun Mo, Zhiyuan Sun, and Ting Shu Wang are responsible for completing the backend of our application.
+    With a project of this scale, we have to break down our expectation of our product into manageble and doable components. We separate the tasks of our project   into two parts - frontend and backend. Calvin Yu, Yingke Wang, and Sherry Wang are responsible for completing the frontend of our application. Ka Chun Mo, Zhiyuan Sun, and Ting Shu Wang are responsible for completing the backend of our application.
     
     We consider this decision (the devision of tasks) as successful because everyone participates in an indispensible part during the whole development process. Overall, every team member completes their own tasks on time. Everyone takes part in a crucial portion of the application and everyone takes ownership of the features they are responsible for. 
     
-    * Frontend: Calvin Yu is responsible for building the map page. Sherry is responsible for the detail page. Yingke is responsible for building the setting page and accessibility page. 
+    * Frontend: Calvin Yu is responsible for building the map page. Sherry is responsible for the detail page. Yingke is responsible for building the setting page and accessibility page. Tasks such as connecting with backend that are used by multiple pages are allocated in a case by case manner.
     
     * Backend: Ka Chun is responsible for setting up the code and folder structure of the backend application, connecting the backend application to the our database (MongoDB), and deploying the application via Heroku. Zhiyuan Sun is responsible for designing and implementing the API which is an important part for the communication of our frontend application. Shu Ting Wang is responsible for setting up the server for storing our audio and image files which is crucial since the whole idea of our application is based on the idea of building a Geo-**Audio** application.
 
@@ -39,6 +39,10 @@
  * Content of weekly meetings
  
     At first we decided to discuss whatever topic or problems that comes to our minds during the weekly meetings. However, it quickly resulted in a lack of direction and discussion during the weekly meetings. In some weeks, our meetings will be very efficient and effective in terms of planning and deciding what to do. In the other weeks, our meeetings did not have solid topics for discussion and quickly turned into chitchat sessions. To remedy this situation, we decided to have a plan before our meetings every week to lay out what we will be discussing during the meetings. This will make our meetings more time-efficient and less of a waste of time.
+    
+ * Time management
+ 
+    As many of us are learning new technologies for this project, we allocated time for each of us to learn these technologies. However, we allocated too much time for learning the technologies and end up not having much time for the actural coding part of the project. Havnig better managed our shcedule and starting earlier would leave us in a better position in things like implementing CI/CD or following more strictly to our workflow.  
 
 #### Q3. Planned changes
 
