@@ -7,6 +7,10 @@ import SettingButton from '../components/SettingButton/SettingButton'
 import { AttractionContext } from '../contexts/AttractionContext'
 
 function MapPage({ navigation }) {
+    /**
+     * A page displaying a map and markers that allows user to choose attractions and see detail 
+     * or listen to an audio description about the attraction
+     */
     const [ selected, setSelected ] = useState();
     const [ audio, setAudio ] = useState("http://138.197.141.138/cherry_blossom.mp3");
     const { setUpdate, attractions, getAttraction} = useContext(AttractionContext)
