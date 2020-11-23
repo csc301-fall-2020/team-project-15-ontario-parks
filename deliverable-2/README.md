@@ -8,6 +8,7 @@ Imagine walking in a part and seeing a beautiful plant or am amazing architectur
 
 To simplify the limit the scope of our problem statement, we focus on providing natural, cultural, and historical information in High Park.
 
+
  
 ## Key Features
   * Frontend:
