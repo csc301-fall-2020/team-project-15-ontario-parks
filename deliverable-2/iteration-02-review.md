@@ -62,9 +62,4 @@
 ## Product - Review
 
 #### Q4. How was your product demo?
- * How did you prepare your demo?
- * What did you manage to demo to your partner?
- * Did your partner accept the features?
- * Were there change requests?
- * What did you learn from the demo from either a process or product perspective?
- * *This section will be marked very leniently so keep it brief and just make sure the points are addressed*
+It has been a very tight schedule for us and our partner. We planned to demo the application to our partner this past Wednesday but we are not able to due to the conflict of schedule with an emergency on our partner's side. We have not been able to reschedule the demo this week because we are not able to find a timeslot that works for everyone in the team. We are now planning to perform the demo on Wednesday(November 25) and we will be able to update this part then.
