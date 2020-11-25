@@ -1,0 +1,30 @@
+{
+  "name": "OntarioPark",
+  "displayName": "OntarioPark",
+  "expo": {
+    "name": "OntarioPark",
+    "icon": "./assets/places.png",
+    "description": "The OntarioPark that create a virtual park map ",
+    "slug": "OntarioPark",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "android": {
+      "package": "com.OntarioParks",
+      "versionCode": 1,
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyBcyBilxbGrMSFxznVyvXq3dcYzdb2A5Tk"
+        }
+      }
+    },
+    "ios": {
+      "bundleIdentifier": "com.OntarioParks",
+      "buildNumber": "1.0.0",
+      "config": {
+        "googleMapsApiKey": "AIzaSyBcyBilxbGrMSFxznVyvXq3dcYzdb2A5Tk"
+      }
+    }
+  }
+}

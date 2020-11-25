@@ -1,0 +1,1 @@
+export default "https://ontario-park.herokuapp.com/api/attractions"

@@ -1,0 +1,32 @@
+[{
+        "name": "Colborne Lodge",
+        "latitude": "43.6404",
+        "longitude": "-79.4600",
+        "description": "Built in 1836 by City Surveyor John George Howard. It was originally one storey, but Howard later expanded it by adding the upper level. The house was named after Sir John Colborne, Lieutenant-Governor of Upper Canada from 1828 to 1836 and first Canadian patron of Howard's architecture. The cottage sat on 165 acres (0.67 km2) of land owned by Howard. His original intent was to start a farm on the property. The landscape of the property with its steep hills, wetlands and sandy soils would have been difficult to develop in any event. Howard and his wife Jemima had no children and thus deeded the park to the city in 1873, in exchange for a permanent pension. He continued to live in his home until his death in 1890. Additional land was purchased by the city in 1873 and 1930, thereby expanding the park to the current 399 acres (1.61 km2). The home is now a museum run by the City of Toronto. The museum displays the house and furnishings of the 1800s, using much of the Howards' own furnishings and artworks. The museum holds an annual Harvest Festival, plus summer and March break camps for children. Annually at Hallowe'en, guides put on a 'Haunted Walk' discussing legends of ghost appearances at the Lodge",
+        "audio": "",
+        "image": ""
+    }, {
+        "name": "Hawk Hill",
+        "longitude": "43.6464",
+        "latitude": "-79.4658",
+        "description": "High Park has the distinction of being one of the very few major raptor monitoring sites operating in the centre of a large urban environment. While the primary objective of the hawk watch is to enjoy and monitor the fall raptor migration, there is a public participation element which is encouraged and respected. The Toronto Ornithological Club has greatly contributed to the spotting, identification and counting of incoming raptors.The High Park Hawk Watch welcomes all visitors and active participants to what has become a very popular destination in High Park. Weekly totals throughout the season are posted on the ONTBIRDS listserv.Monthly species daily totals which meet the Toronto Ornithological Club reporting guidelines are forwarded to the Records Committee for inclusion in their database.",
+        "audio": "",
+        "image": ""
+    },
+    {
+        "name": "High Park Zoo",
+        "longitude": "43.6428",
+        "latitude": "-79.4614",
+        "description": "Established in the 1893 for deer, the Zoo’s animal paddocks have always been a popular attraction. Today, over 125 years later, the Zoo’s eleven paddocks are home to a variety of animal species from around the world including bison, llamas, peacocks, reindeer, highland cattle, wallabies, emus and sheep. The Zoo is free to the public and attracts over 700,000 visitors each year. The Zoo is open every day from 7:00 am to dusk. The Llama Pen is open weekends and statutory holidays allowing visitors to feed and pet the llamas from 12:00 noon to 2:00 pm beginning in April until the end of October.",
+        "audio": "",
+        "image": ""
+    },
+    {
+        "name": "Cherry Blossom",
+        "longitude": "43.6451",
+        "latitude": "-79.4668",
+        "description": "High Park attracts many visitors in early spring to admire the beautiful cherry blossoms. Many people ask about the best time to see the cherry trees in full bloom: your best bet is to pay a visit in late April or early May. Cherry blossoms last for about a week to a week and a half if the weather is nice but if it rains while they are in bloom then the flower petals fall quicker and the blooming may be over in just a few short days. Some years - not too often - if the weather is unusually cold in April then the trees may not bloom at all since Toronto's climate is about as cold as the Sakura trees can tolerate.",
+        "audio": "",
+        "image": ""
+    }
+]
