@@ -2,7 +2,7 @@
 
 The URL for Ontario Parks' API:
 ```
-https://ontario-park.herokuapp.com/api
+https://damp-cliffs-49792.herokuapp.com/api
 ```
 
 ## Categories
