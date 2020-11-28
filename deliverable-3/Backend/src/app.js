@@ -2,6 +2,7 @@ const express = require('express');
 
 const attractionRoute = require('./routes/attractionRoute');
 const categoryRoute = require('./routes/categoryRoute')
+const closestRoute = require('./routes/closestRoute')
 
 const app = express();
 
@@ -11,5 +12,6 @@ app.use(express.json());
 // Routes
 app.use('/api/attractions', attractionRoute);
 app.use('/api/categories', categoryRoute)
+app.use('/api/closest', closestRoute);
 
 module.exports = app;
