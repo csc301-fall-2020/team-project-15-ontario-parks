@@ -18,7 +18,6 @@ function MapPage({ navigation }) {
     const { location } = useContext(LocationContext)
     
     // The initial region that is displayed on user's screen 
-    console.log(location)
     const mapRegion =  {
         latitude: location ? location.coords.latitude : 43.6464479,
         longitude: location ? location.coords.longitude : -79.463079,
@@ -31,12 +30,10 @@ function MapPage({ navigation }) {
         if (attraction !== undefined && attraction.audio) {
             setAudio(attraction.audio)       
         }
-        console.log(location)
     }, [selected])
 
     const goToSetting = () => {
         navigation.navigate('Setting')
-        console.log(location)
     }
 
     const goToDetail = (id) => {

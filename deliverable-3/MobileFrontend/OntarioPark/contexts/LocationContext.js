@@ -5,6 +5,9 @@ import React, { useState, useEffect } from 'react'
 const LocationContext = React.createContext()
 
 function LocationContextProvider(props) {
+    /**
+     * Context for getting user's current location
+     */
     const [ location, setLocation ] = useState(null)
     const [ granted, setGranted ] = useState(false)
 
@@ -12,8 +15,6 @@ function LocationContextProvider(props) {
     // Set location to last known location if permission granted
     useEffect(() => {
         initializeLocation(setGranted, setLocation)
-
-        console.log(location)
     }, []);
 
     // Get the current location if permission granted
