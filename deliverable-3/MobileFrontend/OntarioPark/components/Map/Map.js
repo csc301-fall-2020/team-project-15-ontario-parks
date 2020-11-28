@@ -7,14 +7,6 @@ function Map(props) {
      * A Map View displaying Marker on locations provided
      */
 
-    // The initial region that is displayed on user's screen 
-    const mapRegion = {
-        latitude: parseFloat(props.latitude),
-        longitude: parseFloat(props.longitude),
-        latitudeDelta: parseFloat(props.latitudeDelta),
-        longitudeDelta: parseFloat(props.longitudeDelta)
-    }
-
     // Creating Markers to be displayed on the user's screen
     const [ markers, setMakers ] = useState([])
     useEffect(() => {
@@ -42,8 +34,9 @@ function Map(props) {
     return(
         <MapView 
             style={styles.mapDisplay} 
-            region={mapRegion}    
+            region={props.mapRegion}    
             provider={PROVIDER_GOOGLE}
+            showsUserLocation={true}
         >
             {markers}
         </MapView>
