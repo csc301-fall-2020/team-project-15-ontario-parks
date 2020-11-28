@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors')
 
 const attractionRoute = require('./routes/attractionRoute');
 const categoryRoute = require('./routes/categoryRoute')
