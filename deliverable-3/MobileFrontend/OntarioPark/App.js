@@ -35,9 +35,9 @@ const App = () => {
     );
   }
   return (
-    <SafeAreaProvider>
-      <AttractionContextProvider>
-        <LocationContextProvider>
+    <SafeAreaProvider> 
+      <LocationContextProvider>
+        <AttractionContextProvider>
           <AccessibilityContextProvider>
             <NavigationContainer>
               <Stack.Navigator
@@ -57,9 +57,8 @@ const App = () => {
               </Stack.Navigator>
             </NavigationContainer>          
           </AccessibilityContextProvider>          
-        </LocationContextProvider>
-
-      </AttractionContextProvider>
+        </AttractionContextProvider>        
+      </LocationContextProvider>
     </SafeAreaProvider>
   );
 };
