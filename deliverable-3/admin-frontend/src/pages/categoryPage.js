@@ -7,12 +7,14 @@ const CategoryPage = () => {
     const [categories, setCategories] = useState();
 
     useEffect(() => {
-        axios.get('http://127.0.0.1:5000/api/categories').then(res => {
-            console.log(res)
+        axios.get('https://damp-cliffs-49792.herokuapp.com/api/categories').then(res => {
+            setCategories(res)
         }).catch(err => {
             console.log(err)
         })
     })
+
+    const displayedCategories = categories.map()
 
     return (
         <Container>Category</Container>
