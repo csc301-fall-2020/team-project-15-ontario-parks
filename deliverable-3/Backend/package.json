@@ -4,13 +4,15 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "start": "node src/server.js"
+        "start": "node src/server.js",
+        "dev": "nodemon src/server.js"
     },
     "author": "",
     "license": "ISC",
     "dependencies": {
         "express": "^4.17.1",
-        "mongoose": "^5.10.14"
+        "mongoose": "^5.10.14",
+        "nodemon": "^2.0.6"
     },
     "engines": {
         "node": "v12.18.1",
