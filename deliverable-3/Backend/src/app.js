@@ -6,8 +6,9 @@ const categoryRoute = require('./routes/categoryRoute')
 const app = express();
 
 // Middlewares
-app.use(express.json());
 app.use(cors())
+app.use(express.json());
+
 
 // Routes
 app.use('/api/attractions', attractionRoute);
