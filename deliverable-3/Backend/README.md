@@ -1,6 +1,6 @@
 # API Reference
 
-The URL for the Ontario Parks' API is 
+The URL for Ontario Parks' API:
 ```
 https://ontario-park.herokuapp.com/api
 ```
