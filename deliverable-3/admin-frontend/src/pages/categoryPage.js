@@ -14,7 +14,7 @@ const CategoryPage = () => {
         })
     })
 
-    const displayedCategories = categories.map()
+    // const displayedCategories = categories.map()
 
     return (
         <Container>Category</Container>
