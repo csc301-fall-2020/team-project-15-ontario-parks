@@ -14,7 +14,7 @@ function MapPage({ navigation }) {
      */
     const [ selected, setSelected ] = useState();
     const [ audio, setAudio ] = useState("http://138.197.141.138/cherry_blossom.mp3")
-    const { setUpdate, attractions, getAttraction} = useContext(AttractionContext)
+    const { attractions, getAttraction} = useContext(AttractionContext)
     const { location } = useContext(LocationContext)
     
     // The initial region that is displayed on user's screen 
