@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import backendUrl from '../constants/backendUrl'
 import axios from 'axios'
+import { LocationContext } from '../contexts/LocationContext'
 
 const AttractionContext = React.createContext()
 
@@ -9,7 +10,7 @@ function AttractionContextProvider(props) {
      * Context for interacting with server and fetch data
      */
     const [ attractions, setAttractions ] = useState([])
-    const [ update, setUpdate ] = useState(true)
+    const { location } = useContext(LocationContext)
 
     // Returns the attraction with the provided id
     const getAttraction = (id) => {
@@ -18,20 +19,17 @@ function AttractionContextProvider(props) {
 
     // Gets all avaliable items from the backend
     useEffect(() => {
-        if (update) {
-            axios.get(backendUrl)
-                .then(res => {
-                    setAttractions(res.data)
-                })
-                .catch(err => {
-                    console.log(err)
-                })    
-            setUpdate(false)
-        }    
-    }, [update])
+        axios.get(backendUrl)
+        .then(res => {
+            setAttractions(res.data)
+        })
+        .catch(err => {
+            console.log(err)
+        })     
+    }, [location])
 
     return (
-        <AttractionContext.Provider value={{setUpdate, attractions, getAttraction}}>
+        <AttractionContext.Provider value={{attractions, getAttraction}}>
             { props.children }
         </AttractionContext.Provider>
     )
