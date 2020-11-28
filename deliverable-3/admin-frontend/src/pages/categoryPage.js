@@ -9,6 +9,7 @@ const CategoryPage = () => {
     useEffect(() => {
         axios.get('https://damp-cliffs-49792.herokuapp.com/api/categories').then(res => {
             setCategories(res)
+            console.log(res)
         }).catch(err => {
             console.log(err)
         })
