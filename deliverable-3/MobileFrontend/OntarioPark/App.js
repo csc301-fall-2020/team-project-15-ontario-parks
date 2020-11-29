@@ -13,6 +13,7 @@ import * as Font from "expo-font";
 import { AttractionContextProvider } from "./contexts/AttractionContext";
 import { AccessibilityContextProvider } from "./contexts/AccessibilityContext";
 import { LocationContextProvider } from "./contexts/LocationContext";
+import { AudioContextProvider } from "./contexts/AudioContext";
 
 const fetchFonts = () => {
   return Font.loadAsync({
@@ -39,23 +40,25 @@ const App = () => {
       <LocationContextProvider>
         <AttractionContextProvider>
           <AccessibilityContextProvider>
-            <NavigationContainer>
-              <Stack.Navigator
-                initialRouteName="Map"
-                screenOptions={{
-                  headerShown: false,
-                }}
-              >
-                <Stack.Screen name="Map" component={MapPage} />
-                <Stack.Screen name="Setting" component={SettingPage} />
-                <Stack.Screen
-                  name="Details"
-                  component={DetailsPage}
-                  options={{ headerShown: true }}
-                />
-                <Stack.Screen name="Accessibility" component={AccessibilityPage} />
-              </Stack.Navigator>
-            </NavigationContainer>          
+            <AudioContextProvider>
+              <NavigationContainer>
+                <Stack.Navigator
+                  initialRouteName="Map"
+                  screenOptions={{
+                    headerShown: false,
+                  }}
+                >
+                  <Stack.Screen name="Map" component={MapPage} />
+                  <Stack.Screen name="Setting" component={SettingPage} />
+                  <Stack.Screen
+                    name="Details"
+                    component={DetailsPage}
+                    options={{ headerShown: true }}
+                  />
+                  <Stack.Screen name="Accessibility" component={AccessibilityPage} />
+                </Stack.Navigator>
+              </NavigationContainer>                 
+            </AudioContextProvider>
           </AccessibilityContextProvider>          
         </AttractionContextProvider>        
       </LocationContextProvider>
