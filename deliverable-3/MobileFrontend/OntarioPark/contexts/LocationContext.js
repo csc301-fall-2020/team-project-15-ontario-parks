@@ -9,6 +9,7 @@ function LocationContextProvider(props) {
      * Context for getting user's current location
      */
     const [ location, setLocation ] = useState(null)
+    const [ prevLocation, setPrevLocation ] = useState(null)
     const [ granted, setGranted ] = useState(false)
 
     // Initialize the location context
@@ -25,14 +26,15 @@ function LocationContextProvider(props) {
                 accuracy: Location.Accuracy.Highest, // Highest accuracy
                 timeInterval: 1000, // At least 1000ms between update
                 distanceInterval: 20 // Twenty meter of interval
-            }, (location) => {
-                setLocation(location)
+            }, (newLocation) => {
+                setPrevLocation(location)
+                setLocation(newLocation)
             })
         }
     }, [granted])
 
     return(
-        <LocationContext.Provider value={{location}} >
+        <LocationContext.Provider value={{location, prevLocation}} >
             { props.children }
         </LocationContext.Provider>
     )
