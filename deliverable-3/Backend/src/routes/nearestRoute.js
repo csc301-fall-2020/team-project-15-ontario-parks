@@ -1,9 +1,9 @@
 const express = require('express');
-const Attraction = require('../models/Attraction');
+const Nearest = require('../models/Nearest');
 const router = express.Router();
 
 router.get('/:latitude/:longitude', function (req, res) {
-    Attraction.find()
+    Nearest.find()
         .then((result) => {
             const latitude = req.params.latitude
             const longitude = req.params.longitude
@@ -20,10 +20,6 @@ router.get('/:latitude/:longitude', function (req, res) {
             }
             res.send(result[index]);
         })
-
-
-
-
         .catch((err) => {
             console.log(err);
         });
