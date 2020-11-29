@@ -1,5 +1,5 @@
 const express = require('express');
-const Preference = require('../models/Attraction');
+const Preference = require('../models/Preference');
 const router = express.Router();
 
 router.get('/:preference', function (req, res) {
@@ -10,7 +10,6 @@ router.get('/:preference', function (req, res) {
             const preference = pre.split('-')
 
             const resultLength = result.length
-            const preLength = preference.length
 
             let preferentList = []
             for(let i = 0; i < resultLength; i ++){

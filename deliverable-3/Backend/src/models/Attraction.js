@@ -32,6 +32,6 @@ const attractionSchema = new mongoose.Schema({
     }
 });
 
-const Attraction = mongoose.model('Attraction', attractionSchema);
+const Attraction = mongoose.model('Attraction', attractionSchema, "attractions");
 
 module.exports = Attraction;

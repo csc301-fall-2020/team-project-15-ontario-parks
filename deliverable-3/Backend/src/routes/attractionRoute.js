@@ -1,5 +1,5 @@
 const express = require('express');
-const Attraction = require('../models/Preference');
+const Attraction = require('../models/Attraction');
 const router = express.Router();
 
 router.get('/', function (req, res) {
