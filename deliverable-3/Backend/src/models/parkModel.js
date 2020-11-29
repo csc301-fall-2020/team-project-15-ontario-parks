@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
-const app = require('../app');
 
-const nearestSchema = mongoose.Schema({
+const parkSchema = mongoose.Schema({
     name: {
         type: String,
         required: true,
@@ -16,6 +15,6 @@ const nearestSchema = mongoose.Schema({
     }
 });
 
-const Nearest = mongoose.model('Nearest', nearestSchema, "attractions");
+const Nearest = mongoose.model('Park', parkSchema);
 
 module.exports = Nearest;
