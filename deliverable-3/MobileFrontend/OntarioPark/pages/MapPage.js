@@ -6,6 +6,7 @@ import PlayBackButton from '../components/PlayBack/PlayBackButton'
 import SettingButton from '../components/SettingButton/SettingButton'
 import { AttractionContext } from '../contexts/AttractionContext'
 import { LocationContext } from '../contexts/LocationContext'
+import useGeofence from '../hooks/useGeofence'
 
 function MapPage({ navigation }) {
     /**
@@ -16,6 +17,7 @@ function MapPage({ navigation }) {
     const [ audio, setAudio ] = useState("http://138.197.141.138/cherry_blossom.mp3")
     const { attractions, getAttraction} = useContext(AttractionContext)
     const { location } = useContext(LocationContext)
+    useGeofence()
     
     // The initial region that is displayed on user's screen 
     const mapRegion =  {
