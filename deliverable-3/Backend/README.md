@@ -14,6 +14,7 @@ https://damp-cliffs-49792.herokuapp.com/api
  ```
  {
     "status": "success",
+    "length": 3,
     "data": [
         {
             "_id": "5fc1547cc578324530ca1bc9",
@@ -34,6 +35,7 @@ https://damp-cliffs-49792.herokuapp.com/api
  ```
  {
     "status": "success",
+    "length": 3,
     "data": [
         {
             "_id": "5fc404cbd9963732324d0136",
@@ -86,6 +88,7 @@ https://damp-cliffs-49792.herokuapp.com/api
  ```
  {
     "status": "success",
+    "length": 3,
     "data": [
         {
             "_id": "5fb84b5b91a6dfbe71700c37",
