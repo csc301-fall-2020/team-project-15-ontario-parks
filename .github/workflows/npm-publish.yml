@@ -11,7 +11,7 @@ on:
 
 defaults:
   run:
-    working-directory: Backend
+    working-directory: deliverable-3/Backend
 
 
 jobs:
@@ -38,6 +38,6 @@ jobs:
 
       - run: npm install
 
-      - run: npm test
-        env:
-          CI: true
+#       - run: npm test
+#         env:
+#           CI: true
