@@ -9,7 +9,7 @@ import MapPage from "./pages/MapPage";
 import DetailsPage from "./pages/DetailsPage";
 import AccessibilityPage from "./pages/AccessbilityPage";
 import * as Font from "expo-font";
-
+import CategoriesScreen from "./pages/CategoriesPages";
 import { AttractionContextProvider } from "./contexts/AttractionContext";
 import { AccessibilityContextProvider } from "./contexts/AccessibilityContext";
 
@@ -39,11 +39,12 @@ const App = () => {
         <AccessibilityContextProvider>
           <NavigationContainer>
             <Stack.Navigator
-              initialRouteName="Map"
+              initialRouteName="Categories"
               screenOptions={{
                 headerShown: false,
               }}
             >
+              <Stack.Screen name="Categories" component={CategoriesScreen}  />
               <Stack.Screen name="Map" component={MapPage} />
               <Stack.Screen name="Setting" component={SettingPage} />
               <Stack.Screen
