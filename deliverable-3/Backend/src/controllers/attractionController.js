@@ -15,6 +15,7 @@ exports.getAttractionsByParkAndCategory = async (req, res) => {
         }
         res.status(200).json({
             status: 'success',
+            length: result.length,
             data: result
         })
     } catch (err) {

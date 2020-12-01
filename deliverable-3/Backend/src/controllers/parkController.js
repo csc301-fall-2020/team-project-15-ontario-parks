@@ -7,6 +7,7 @@ exports.getAllParks = async (req, res) => {
         const parks = await Park.find()
         res.status(200).json({
             status: 'success',
+            length: parks.length,
             data: parks
         })
     } catch (err) {
