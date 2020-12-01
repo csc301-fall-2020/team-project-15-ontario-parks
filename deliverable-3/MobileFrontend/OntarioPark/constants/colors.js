@@ -7,6 +7,7 @@ const colors = {
     accent: "#c717fc",
     settingHeader: "#C0C0C0",
     blue: "#25A5D3",
+    yellow: "#CCCC00"
 }
 
 export default colors

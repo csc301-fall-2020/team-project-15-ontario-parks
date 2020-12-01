@@ -9,7 +9,7 @@ import MapPage from "./pages/MapPage";
 import DetailsPage from "./pages/DetailsPage";
 import AccessibilityPage from "./pages/AccessbilityPage";
 import * as Font from "expo-font";
-
+import CategoriesScreen from "./pages/CategoriesPages";
 import { AttractionContextProvider } from "./contexts/AttractionContext";
 import { AccessibilityContextProvider } from "./contexts/AccessibilityContext";
 import { LocationContextProvider } from "./contexts/LocationContext";
@@ -48,6 +48,7 @@ const App = () => {
                     headerShown: false,
                   }}
                 >
+                  <Stack.Screen name="Categories" component={CategoriesScreen}  />
                   <Stack.Screen name="Map" component={MapPage} />
                   <Stack.Screen name="Setting" component={SettingPage} />
                   <Stack.Screen
