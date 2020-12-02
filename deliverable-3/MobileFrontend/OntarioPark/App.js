@@ -14,6 +14,7 @@ import { AttractionContextProvider } from "./contexts/AttractionContext";
 import { AccessibilityContextProvider } from "./contexts/AccessibilityContext";
 import { LocationContextProvider } from "./contexts/LocationContext";
 import { AudioContextProvider } from "./contexts/AudioContext";
+import { CategoryContextProvider } from "./contexts/CategoryContext";
 
 const fetchFonts = () => {
   return Font.loadAsync({
