@@ -75,7 +75,7 @@ https://damp-cliffs-49792.herokuapp.com/api
 ## Attractions
 
 ### Get attractions by park and category
- - URL `/`
+ - URL `/attractions`
  - Method: `GET`
  - Query Strings:
    - `park`: the name of the park
