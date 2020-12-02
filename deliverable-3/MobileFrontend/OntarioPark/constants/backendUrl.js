@@ -1,1 +1,1 @@
-export default "https://ontario-park.herokuapp.com/api/attractions"
+export default "https://damp-cliffs-49792.herokuapp.com/api"
