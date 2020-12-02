@@ -102,6 +102,10 @@ An APK file called Phase-2.apk has already been generated and placed at the deli
 - Click on the button on the top-left of the accessibility page.
 - This takes you to the setting page where you can set the accessibility mode.
 
+## Backend
+
+Please go into the directory title `Backend` if you want to look at our API references.
+
 ## Development requirements
 
 ### Front End Development Installing
