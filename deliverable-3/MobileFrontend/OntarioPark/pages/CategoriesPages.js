@@ -1,16 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import {
     View,
-    Text,
     FlatList,
     StyleSheet,
-    TouchableOpacity
 } from 'react-native';
-import  CATEGORIES  from '../constants/categories';
 import CategoryGridTile from '../components/CategoryGridTile';
 import colors from "../constants/colors";
 import CategoryHeader from "../components/Header/CategoryHeader";
+import { CategoryContext } from '../contexts/CategoryContext';
+
 const CategoriesScreen = props => {
+
+    const { categories } = useContext(CategoryContext)
 
     const renderGridItem = itemData => {
         if (itemData.item.name){
@@ -24,15 +25,14 @@ const CategoriesScreen = props => {
                 />
             );
         }
-
     };
-    console.log(CATEGORIES)
+
     return (
         <View>
             <CategoryHeader title = "Categories"/>
             <FlatList
                 keyExtractor={(item) => item["_id"]}
-                data={CATEGORIES}
+                data={categories}
                 renderItem={renderGridItem}
                 numColumns={2}
             />

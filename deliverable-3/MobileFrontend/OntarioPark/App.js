@@ -12,6 +12,7 @@ import * as Font from "expo-font";
 import CategoriesScreen from "./pages/CategoriesPages";
 import { AttractionContextProvider } from "./contexts/AttractionContext";
 import { AccessibilityContextProvider } from "./contexts/AccessibilityContext";
+import { CategoryContextProvider } from "./contexts/CategoryContext";
 
 const fetchFonts = () => {
   return Font.loadAsync({
@@ -35,28 +36,31 @@ const App = () => {
   }
   return (
     <SafeAreaProvider>
-      <AttractionContextProvider>
-        <AccessibilityContextProvider>
-          <NavigationContainer>
-            <Stack.Navigator
-              initialRouteName="Categories"
-              screenOptions={{
-                headerShown: false,
-              }}
-            >
-              <Stack.Screen name="Categories" component={CategoriesScreen}  />
-              <Stack.Screen name="Map" component={MapPage} />
-              <Stack.Screen name="Setting" component={SettingPage} />
-              <Stack.Screen
-                name="Details"
-                component={DetailsPage}
-                options={{ headerShown: true }}
-              />
-              <Stack.Screen name="Accessibility" component={AccessibilityPage} />
-            </Stack.Navigator>
-          </NavigationContainer>          
-        </AccessibilityContextProvider>
-      </AttractionContextProvider>
+      <CategoryContextProvider>
+        <AttractionContextProvider>
+          <AccessibilityContextProvider>
+            <NavigationContainer>
+              <Stack.Navigator
+                initialRouteName="Categories"
+                screenOptions={{
+                  headerShown: false,
+                }}
+              >
+                <Stack.Screen name="Categories" component={CategoriesScreen}  />
+                <Stack.Screen name="Map" component={MapPage} />
+                <Stack.Screen name="Setting" component={SettingPage} />
+                <Stack.Screen
+                  name="Details"
+                  component={DetailsPage}
+                  options={{ headerShown: true }}
+                />
+                <Stack.Screen name="Accessibility" component={AccessibilityPage} />
+              </Stack.Navigator>
+            </NavigationContainer>          
+          </AccessibilityContextProvider>
+        </AttractionContextProvider>        
+      </CategoryContextProvider>
+      
     </SafeAreaProvider>
   );
 };
