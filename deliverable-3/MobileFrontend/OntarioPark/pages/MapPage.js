@@ -13,10 +13,12 @@ function MapPage({ navigation }) {
      * A page displaying a map and markers that allows user to choose attractions and see detail 
      * or listen to an audio description about the attraction
      */
-    const [ selected, setSelected ] = useState();
+    const [ selected, setSelected ] = useState()
     const [ audio, setAudio ] = useState("http://138.197.141.138/cherry_blossom.mp3")
-    const { attractions, getAttraction} = useContext(AttractionContext)
-    const { location } = useContext(LocationContext)
+    const { attractions, getAttraction, park, location} = useContext(AttractionContext)
+
+    const [ headerText, setHeaderText ] = useState("")
+
     useGeofence()
     
     // The initial region that is displayed on user's screen 
@@ -33,6 +35,13 @@ function MapPage({ navigation }) {
             setAudio(attraction.audio)       
         }
     }, [selected])
+
+    useEffect(() =>{
+        console.log(park)
+        if (park) {
+            setHeaderText(`Welcome to ${park}`)            
+        }
+    }, [park])
 
     const goToSetting = () => {
         navigation.navigate('Setting')
@@ -57,7 +66,7 @@ function MapPage({ navigation }) {
                 setSelected={setSelected}
                 goToDetail={goToDetail}
             />
-            <MapHeader text="Welcome to High Park" />
+            <MapHeader text={headerText} />
             <PlayBackButton src={audio} style = {{}} size = {100}/>
             <SettingButton handlePress={goToSetting} />
         </View>
