@@ -4,13 +4,22 @@ exports.getAttractionsByParkAndCategory = async (req, res) => {
     try {
         const queryObj = { ...req.query }
         const park = queryObj['park']
-        const categories = queryObj['category'].split(',')
         const attractions = await Attraction.find()
         let result = []
-        for (let i = 0; i < attractions.length; i++) {
-            const attraction = attractions[i]
-            if (categories.includes(attraction['category']) && attraction['park'] == park) {
-                result.push(attraction)
+        if (queryObj['category'] == undefined) {
+            for (let i = 0; i < attractions.length; i++) {
+                const attraction = attractions[i]
+                if (attraction['park'] == park) {
+                    result.push(attraction)
+                }
+            }
+        } else {
+            const categories = queryObj['category'].split(',')
+            for (let i = 0; i < attractions.length; i++) {
+                const attraction = attractions[i]
+                if (categories.includes(attraction['category']) && attraction['park'] == park) {
+                    result.push(attraction)
+                }
             }
         }
         res.status(200).json({
