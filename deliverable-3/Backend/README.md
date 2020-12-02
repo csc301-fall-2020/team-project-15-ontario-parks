@@ -78,8 +78,8 @@ https://damp-cliffs-49792.herokuapp.com/api
  - URL `/`
  - Method: `GET`
  - Query Strings:
-   - `park`: the name of the park (replace space with `+` e.g. `park=high+park`)
-   - `category`: the category of user's preference (if there are multiple categories, separate them with `,` e.g. `category=general,natural`)
+   - `park`: the name of the park
+   - `category` (optional): the category of user's preference (if there are multiple categories, separate them with `,` e.g. `category=general,natural`)
  - Sample Request:
  ```
  https://damp-cliffs-49792.herokuapp.com/api/attractions?park=high+park&category=general,natural
