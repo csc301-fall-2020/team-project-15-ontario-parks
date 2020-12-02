@@ -12,6 +12,7 @@ function AttractionContextProvider(props) {
     const [ attractions, setAttractions ] = useState([])
     const [ park, setPark ] = useState('')
     const { location } = useContext(LocationContext)
+    const category = ""
 
     // Returns the attraction with the provided id
     const getAttraction = (id) => {
@@ -37,14 +38,14 @@ function AttractionContextProvider(props) {
     // Gets attractions in the park from the backend
     useEffect(() => {
         if (park) {
-            axios.get(backendUrl, {
-                params: {
-                    park: park,
-                    category: []
-                }
-            })
+            let params = { park }
+            if (category) {
+                params.category = category
+            }
+
+            axios.get(`${backendUrl}/attractions`, { params })
                 .then(res => {
-                    setAttractions(res.data)
+                    setAttractions(res.data.data)
                 })
                 .catch(err => {
                     console.log(err)
