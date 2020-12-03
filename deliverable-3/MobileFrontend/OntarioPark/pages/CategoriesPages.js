@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import {
     View,
     FlatList,
@@ -12,16 +12,24 @@ import { CategoryContext } from '../contexts/CategoryContext';
 const CategoriesScreen = props => {
 
     const { categories } = useContext(CategoryContext)
+    const [selectedCategories, setCategories]  =useState([])
 
+    const addCategory = (category) => {
+        selectedCategories.push(category)
+        setCategories(selectedCategories)
+    }
+    const removeCategory = (removeCategory) => {
+        const newCategories = selectedCategories.filter(category => {category !== removeCategory})
+        setCategories(newCategories)
+    }
     const renderGridItem = itemData => {
         if (itemData.item.name){
             return (
                 <CategoryGridTile
                     title={itemData.item.name}
                     color={colors.yellow}
-                    onSelect={() => {
-
-                    }}
+                    onremove = {removeCategory}
+                    onadd = {addCategory}
                 />
             );
         }
@@ -29,7 +37,7 @@ const CategoriesScreen = props => {
 
     return (
         <View>
-            <CategoryHeader title = "Categories"/>
+            <CategoryHeader title = "Categories" onPress = {() => {} }/>
             <FlatList
                 keyExtractor={(item) => item["_id"]}
                 data={categories}
