@@ -9,15 +9,17 @@ const CategoryHeader = props => (
         <View style={styles.TitleView}>
             <TitleText>{props.title}</TitleText>
         </View>
+
+        <HeaderButton style ={styles.buttonView} onpress = {props.onPress}> Continue </HeaderButton>
     </View>
 )
 
 const styles = StyleSheet.create({
-    backView:{
+    buttonView:{
         flexGrow: 1,
         flexDirection: "row",
-        justifyContent: "flex-start",
-        paddingLeft: 10
+        justifyContent: "flex-end",
+        paddingRight: 10
     },
 
     TitleView: {
@@ -35,5 +37,6 @@ const styles = StyleSheet.create({
         backgroundColor: colors.settingHeader ,
         alignItems: "center",
     }
+
 })
 export default CategoryHeader

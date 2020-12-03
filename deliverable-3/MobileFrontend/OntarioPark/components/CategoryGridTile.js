@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState}from 'react';
 import {
   TouchableOpacity,
   View,
@@ -7,6 +7,7 @@ import {
   Platform,
   TouchableNativeFeedback
 } from 'react-native';
+import colors from "../constants/colors";
 
 const CategoryGridTile = props => {
   let TouchableCmp = TouchableOpacity;
@@ -14,11 +15,21 @@ const CategoryGridTile = props => {
   if (Platform.OS === 'android' && Platform.Version >= 21) {
     TouchableCmp = TouchableNativeFeedback;
   }
+  const [activate, setActivate] = useState(false)
+  const onSelect =() => {
+    setActivate(!activate)
+    if (!activate) {
+      props.onremove(props.title)
+    }
+    else  {
+      props.onadd(props.title)
+    }
+  }
   return (
     <View style={styles.gridItem}>
-      <TouchableCmp style={{ flex: 1 }} onPress={props.onSelect}>
+      <TouchableCmp style={{ flex: 1 }} onPress={onSelect}>
         <View
-          style={{ ...styles.container, ...{ backgroundColor: props.color } }}
+          style={activate? { ...styles.container, ... { backgroundColor: colors.primary  } } : { ...styles.container, ... { backgroundColor: props.color } }}
         >
           <Text style={styles.title} numberOfLines={2}>
             {props.title}
