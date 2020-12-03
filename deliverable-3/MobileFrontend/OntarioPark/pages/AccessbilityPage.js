@@ -10,7 +10,7 @@ import AudioItem from "../components/AudioItem";
  */
 
 const AccessibilityPage = ({ navigation }) => {
-    const { setUpdate, attractions, getAttraction} = useContext(AttractionContext)
+    const { attractions, getAttraction} = useContext(AttractionContext)
     const goToSetting = () => {
         navigation.navigate('Setting')
     }

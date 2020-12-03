@@ -24,7 +24,11 @@
       "buildNumber": "1.0.0",
       "config": {
         "googleMapsApiKey": "AIzaSyBcyBilxbGrMSFxznVyvXq3dcYzdb2A5Tk"
-      }
+      },
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "This app uses location to provide information about point of interests around the user.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "This app uses location to notify user when they came pass some point of interest"
+      }        
     }
   }
 }

@@ -5,15 +5,29 @@ import Map from '../components/Map/Map'
 import PlayBackButton from '../components/PlayBack/PlayBackButton'
 import SettingButton from '../components/SettingButton/SettingButton'
 import { AttractionContext } from '../contexts/AttractionContext'
+import { LocationContext } from '../contexts/LocationContext'
+import useGeofence from '../hooks/useGeofence'
 
 function MapPage({ navigation }) {
     /**
      * A page displaying a map and markers that allows user to choose attractions and see detail 
      * or listen to an audio description about the attraction
      */
-    const [ selected, setSelected ] = useState();
-    const [ audio, setAudio ] = useState("http://138.197.141.138/cherry_blossom.mp3");
-    const { setUpdate, attractions, getAttraction} = useContext(AttractionContext)
+    const [ selected, setSelected ] = useState()
+    const [ audio, setAudio ] = useState("http://138.197.141.138/cherry_blossom.mp3")
+    const { attractions, getAttraction, park, location} = useContext(AttractionContext)
+
+    const [ headerText, setHeaderText ] = useState("")
+
+    useGeofence()
+    
+    // The initial region that is displayed on user's screen 
+    const mapRegion =  {
+        latitude: location ? location.coords.latitude : 43.6464479,
+        longitude: location ? location.coords.longitude : -79.463079,
+        latitudeDelta: 0.0125,
+        longitudeDelta: 0.01
+    }
 
     useEffect(() => {
         const attraction = getAttraction(selected)
@@ -21,6 +35,13 @@ function MapPage({ navigation }) {
             setAudio(attraction.audio)       
         }
     }, [selected])
+
+    useEffect(() =>{
+        console.log(park)
+        if (park) {
+            setHeaderText(`Welcome to ${park}`)            
+        }
+    }, [park])
 
     const goToSetting = () => {
         navigation.navigate('Setting')
@@ -40,15 +61,12 @@ function MapPage({ navigation }) {
     return(
         <View style={styles.container}>
             <Map
-                latitude={43.6464479}
-                longitude={-79.463079}
-                latitudeDelta={0.0125}
-                longitudeDelta={0.01}
+                mapRegion={mapRegion}
                 locations={attractions}
                 setSelected={setSelected}
                 goToDetail={goToDetail}
             />
-            <MapHeader text="Welcome to High Park" />
+            <MapHeader text={headerText} />
             <PlayBackButton src={audio} style = {{}} size = {100}/>
             <SettingButton handlePress={goToSetting} />
         </View>

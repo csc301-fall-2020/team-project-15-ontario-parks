@@ -1,8 +1,8 @@
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import React, { useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { useFocusEffect } from '@react-navigation/native';
 import { StyleSheet, TouchableOpacity } from 'react-native';
-import usePlayBack from '../../hooks/usePlayBack';
+import { AudioContext } from '../../contexts/AudioContext';
 
 function PlayBackButton(props) {
     /**
@@ -10,13 +10,20 @@ function PlayBackButton(props) {
      */
     
     //  If the music is playing
-    const { isPlaying, setIsPlaying, setAudioSource } = usePlayBack(props.src)
+    const { isPlaying, setIsPlaying, setAudioUri } = useContext(AudioContext)
     
-    const handlePress = () => setIsPlaying(!isPlaying);
+    const handlePress = () => {
+        if (isPlaying) {
+            setIsPlaying(!isPlaying)            
+        } else {
+            console.log(props.src)
+            setAudioUri(props.src, true)
+        }
+    };
 
     // Update audio source when changed
     useEffect(() => {
-        setAudioSource(props.src)
+        setAudioUri(props.src)
     }, [props.src])
 
     // Stop the audio when page changed
@@ -30,12 +37,14 @@ function PlayBackButton(props) {
 
     return(
         <TouchableOpacity style={{...styles.button, ...props.style}} >
-            <Icon 
-                name={isPlaying ? "pause-circle-filled" : "play-circle-filled"} 
-                size={props.size}
-                onPress={handlePress} 
-                style={styles.icon}
-            />
+            {
+                props.children ? props.children : (<Icon
+                    name={isPlaying ? "pause-circle-filled" : "play-circle-filled"} 
+                    size={props.size}
+                    onPress={handlePress} 
+                    style={styles.icon}
+                />)                    
+            }
         </TouchableOpacity>            
     );
 }
