@@ -9,7 +9,7 @@ import MapPage from "./pages/MapPage";
 import DetailsPage from "./pages/DetailsPage";
 import AccessibilityPage from "./pages/AccessbilityPage";
 import * as Font from "expo-font";
-import CategoriesScreen from "./pages/CategoriesPages";
+import CategoriesPage from "./pages/CategoriesPage";
 import { AttractionContextProvider } from "./contexts/AttractionContext";
 import { AccessibilityContextProvider } from "./contexts/AccessibilityContext";
 import { LocationContextProvider } from "./contexts/LocationContext";
@@ -43,26 +43,28 @@ const App = () => {
         <AttractionContextProvider>
           <AccessibilityContextProvider>
             <AudioContextProvider>
-              <GeofenceContextProvider>
-                <NavigationContainer>
-                  <Stack.Navigator
-                    initialRouteName="Map"
-                    screenOptions={{
-                      headerShown: false,
-                    }}
-                  >
-                    <Stack.Screen name="Categories" component={CategoriesScreen}  />
-                    <Stack.Screen name="Map" component={MapPage} />
-                    <Stack.Screen name="Setting" component={SettingPage} />
-                    <Stack.Screen
-                      name="Details"
-                      component={DetailsPage}
-                      options={{ headerShown: true }}
-                    />
-                    <Stack.Screen name="Accessibility" component={AccessibilityPage} />
-                  </Stack.Navigator>
-                </NavigationContainer>          
-              </GeofenceContextProvider>
+              <CategoryContextProvider>
+                <GeofenceContextProvider>
+                  <NavigationContainer>
+                    <Stack.Navigator
+                      initialRouteName="Categories"
+                      screenOptions={{
+                        headerShown: false,
+                      }}
+                    >
+                      <Stack.Screen name="Categories" component={CategoriesPage}  />
+                      <Stack.Screen name="Map" component={MapPage} />
+                      <Stack.Screen name="Setting" component={SettingPage} />
+                      <Stack.Screen
+                        name="Details"
+                        component={DetailsPage}
+                        options={{ headerShown: true }}
+                      />
+                      <Stack.Screen name="Accessibility" component={AccessibilityPage} />
+                    </Stack.Navigator>
+                  </NavigationContainer>          
+                </GeofenceContextProvider>
+              </CategoryContextProvider>
             </AudioContextProvider>
           </AccessibilityContextProvider>          
         </AttractionContextProvider>        

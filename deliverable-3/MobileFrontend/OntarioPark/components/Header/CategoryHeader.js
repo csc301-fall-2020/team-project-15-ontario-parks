@@ -3,16 +3,24 @@ import { StyleSheet, View } from 'react-native'
 import colors from "../../constants/colors";
 import TitleText from "../TitleText";
 import HeaderButton from "../HeaderButton";
-const CategoryHeader = props => (
-    <View style={styles.header}>
 
-        <View style={styles.TitleView}>
-            <TitleText>{props.title}</TitleText>
-        </View>
+const CategoryHeader = (props) => {
+    return(
+        <View style={styles.header}>
 
-        <HeaderButton style ={styles.buttonView} onpress = {props.onPress}> Continue </HeaderButton>
-    </View>
-)
+            <View style={styles.TitleView}>
+                <TitleText>{props.title}</TitleText>
+            </View>
+
+            <HeaderButton 
+                style ={styles.buttonView} 
+                handlePress = {props.handleContinue}
+            > 
+                Continue 
+            </HeaderButton>
+        </View>        
+    )
+}
 
 const styles = StyleSheet.create({
     buttonView:{

@@ -6,7 +6,7 @@ import Colors from '../constants/colors';
 
 const HeaderButton = props => {
   return (
-    <TouchableOpacity activeOpacity={0.3} onPress={props.onPress}>
+    <TouchableOpacity activeOpacity={0.3} onPress={() => {props.handlePress()}}>
       <View style={styles.button}>
         <Text style={styles.buttonText}>{props.children}</Text>
       </View>
