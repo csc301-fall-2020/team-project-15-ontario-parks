@@ -44,7 +44,7 @@ const App = () => {
             <AudioContextProvider>
               <NavigationContainer>
                 <Stack.Navigator
-                  initialRouteName="Map"
+                  initialRouteName="Categories"
                   screenOptions={{
                     headerShown: false,
                   }}
