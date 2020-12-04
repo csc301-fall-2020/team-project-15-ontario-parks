@@ -25,12 +25,11 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: "space-around",
         alignItems: "center",
-        padding: 10,
-
+        padding: 20,
     },
     text: {
         fontFamily: "open-sans",
-        fontSize: 16
+        fontSize: 20
     }
 })
 

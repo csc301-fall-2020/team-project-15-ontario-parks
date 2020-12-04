@@ -10,7 +10,7 @@ import HeaderButton from "../HeaderButton";
 const PageHeader = props => (
     <View style={styles.header}>
         <View style={styles.backView}>
-            <HeaderButton onPress={props.handlePress}> {props.buttonTitle}</HeaderButton>
+            <HeaderButton handlePress={props.handlePress}> {props.buttonTitle}</HeaderButton>
 
         </View>
         <View style={styles.TitleView}>
