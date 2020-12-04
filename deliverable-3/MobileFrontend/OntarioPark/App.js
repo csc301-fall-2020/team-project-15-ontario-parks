@@ -15,6 +15,7 @@ import { AccessibilityContextProvider } from "./contexts/AccessibilityContext";
 import { LocationContextProvider } from "./contexts/LocationContext";
 import { AudioContextProvider } from "./contexts/AudioContext";
 import { CategoryContextProvider } from "./contexts/CategoryContext";
+import { GeofenceContextProvider } from "./contexts/GeofenceContext";
 
 const fetchFonts = () => {
   return Font.loadAsync({
@@ -42,24 +43,26 @@ const App = () => {
         <AttractionContextProvider>
           <AccessibilityContextProvider>
             <AudioContextProvider>
-              <NavigationContainer>
-                <Stack.Navigator
-                  initialRouteName="Categories"
-                  screenOptions={{
-                    headerShown: false,
-                  }}
-                >
-                  <Stack.Screen name="Categories" component={CategoriesScreen}  />
-                  <Stack.Screen name="Map" component={MapPage} />
-                  <Stack.Screen name="Setting" component={SettingPage} />
-                  <Stack.Screen
-                    name="Details"
-                    component={DetailsPage}
-                    options={{ headerShown: true }}
-                  />
-                  <Stack.Screen name="Accessibility" component={AccessibilityPage} />
-                </Stack.Navigator>
-              </NavigationContainer>                 
+              <GeofenceContextProvider>
+                <NavigationContainer>
+                  <Stack.Navigator
+                    initialRouteName="Map"
+                    screenOptions={{
+                      headerShown: false,
+                    }}
+                  >
+                    <Stack.Screen name="Categories" component={CategoriesScreen}  />
+                    <Stack.Screen name="Map" component={MapPage} />
+                    <Stack.Screen name="Setting" component={SettingPage} />
+                    <Stack.Screen
+                      name="Details"
+                      component={DetailsPage}
+                      options={{ headerShown: true }}
+                    />
+                    <Stack.Screen name="Accessibility" component={AccessibilityPage} />
+                  </Stack.Navigator>
+                </NavigationContainer>          
+              </GeofenceContextProvider>
             </AudioContextProvider>
           </AccessibilityContextProvider>          
         </AttractionContextProvider>        

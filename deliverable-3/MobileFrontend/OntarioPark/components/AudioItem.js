@@ -10,17 +10,15 @@ import Card from "../components/Card";
 const AudioItem = props => {
 
     return(
-        <Card style = {styles.card}>
-            <View style={styles.textView}>
-                <Text style={styles.text}>
-                    {props.title}
-                </Text>
-            </View>
-            <View style={styles.playBackView}>
-                <PlayBackButton src = {props.audioSrc} style ={styles.playBack} size = {30}/>
-            </View>
-
-        </Card>
+        <PlayBackButton style={{flex: 1}} src = {props.audioSrc}>
+            <Card style = {styles.card}>
+                <View style={styles.textView}>
+                    <Text style={styles.text}>
+                        {props.title}
+                    </Text>
+                </View>
+            </Card>
+        </PlayBackButton>
     )
 }
 
@@ -30,32 +28,16 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: "center",
         justifyContent: "space-around",
-        height: 35,
-        marginBottom: 20
-    },
-    playBack: {
-        position: "relative",
-        width: 30,
-        height: 30,
-        justifyContent: 'center',
-        backgroundColor: "white",
-        borderRadius: 50,
-        opacity: 0.8,
-        bottom: 0
+        height: 55,
+        marginBottom: 20,
     },
     textView:{
         flex:1,
-        alignItems: "center"
-    },
-    playBackView: {
-        flex:1,
-        overflow: "visible",
-        justifyContent: "center",
-        alignItems: "center"
+        alignItems: "center",
     },
     text: {
         fontFamily: "open-sans",
-
+        fontSize: 28,
     }
 })
 

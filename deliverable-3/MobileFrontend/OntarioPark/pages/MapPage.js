@@ -5,8 +5,6 @@ import Map from '../components/Map/Map'
 import PlayBackButton from '../components/PlayBack/PlayBackButton'
 import SettingButton from '../components/SettingButton/SettingButton'
 import { AttractionContext } from '../contexts/AttractionContext'
-import { LocationContext } from '../contexts/LocationContext'
-import useGeofence from '../hooks/useGeofence'
 
 function MapPage({ navigation }) {
     /**
@@ -19,8 +17,6 @@ function MapPage({ navigation }) {
 
     const [ headerText, setHeaderText ] = useState("")
 
-    useGeofence()
-    
     // The initial region that is displayed on user's screen 
     const mapRegion =  {
         latitude: location ? location.coords.latitude : 43.6464479,

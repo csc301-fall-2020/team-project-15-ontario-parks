@@ -36,12 +36,14 @@ function PlayBackButton(props) {
     )
 
     return(
-        <TouchableOpacity style={{...styles.button, ...props.style}} >
+        <TouchableOpacity 
+            style={props.children ? styles.container : {...styles.button, ...props.style}}
+            onPress={handlePress} 
+        >
             {
                 props.children ? props.children : (<Icon
                     name={isPlaying ? "pause-circle-filled" : "play-circle-filled"} 
                     size={props.size}
-                    onPress={handlePress} 
                     style={styles.icon}
                 />)                    
             }
@@ -65,6 +67,9 @@ const styles = StyleSheet.create({
     icon: {
         opacity: 1.0,
         color: "black"
+    },
+    container: {
+        flex: 1
     }
 });
 
