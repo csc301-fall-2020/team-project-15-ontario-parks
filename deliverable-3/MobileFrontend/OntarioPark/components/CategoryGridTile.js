@@ -14,7 +14,7 @@ const CategoryGridTile = props => {
   if (Platform.OS === 'android' && Platform.Version >= 21) {
     TouchableCmp = TouchableNativeFeedback;
   }
-  const [activate, setActivate] = useState(false)
+  const [activate, setActivate] = useState(props.activate)
   const onSelect =() => {
     setActivate(!activate)
     if (!activate) {
@@ -28,7 +28,7 @@ const CategoryGridTile = props => {
     <View style={styles.gridItem}>
       <TouchableCmp style={{ flex: 1 }} onPress={onSelect}>
         <View
-          style={activate? { ...styles.container, ... { backgroundColor: colors.primary  } } : { ...styles.container, ... { backgroundColor: props.color } }}
+          style={activate? { ...styles.container, ... { backgroundColor: colors.activate  } } : { ...styles.container, ... { backgroundColor: colors.inactivate } }}
         >
           <Text style={styles.title} numberOfLines={2}>
             {props.title}

@@ -9,12 +9,13 @@ import colors from "../constants/colors";
 import CategoryHeader from "../components/Header/CategoryHeader";
 import { CategoryContext } from '../contexts/CategoryContext';
 import { AccessibilityContext } from '../contexts/AccessibilityContext';
+import {storeCategories, getCategories} from "../localStorage";
 
 const CategoriesPage = ({ navigation }) => {
 
     const { categories } = useContext(CategoryContext)
     const { inAccessibilityMode } = useContext(AccessibilityContext)
-    const [selectedCategories, setCategories] = useState([])
+    const [selectedCategories, setCategories] = useState([getCategories()])
 
     const addCategory = (category) => {
         selectedCategories.push(category)
@@ -31,7 +32,7 @@ const CategoriesPage = ({ navigation }) => {
             return (
                 <CategoryGridTile
                     title={itemData.item.name}
-                    color={colors.yellow}
+                    activate={categories.includes(itemData.item.name)}
                     onremove = {removeCategory}
                     onadd = {addCategory}
                 />
@@ -40,7 +41,7 @@ const CategoriesPage = ({ navigation }) => {
     };
 
     const finishSelect = () => {
-        console.log(1)
+        storeCategories(selectedCategories).then(console.log("stored categories:", selectedCategories))
         if (navigation.canGoBack()) {
             navigation.goBack()
         } else {
