@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import backendUrl from '../constants/backendUrl'
 import axios from 'axios'
+import {getCategories} from "../localStorage";
 
 const CategoryContext = React.createContext()
 
@@ -17,6 +18,12 @@ function CategoryContextProvider(props) {
             .then(res => {
                 setAllCategories(res.data.data)
             })
+    }, [])
+    useEffect(() => {
+
+        getCategories().then(res => {
+            console.log("categoires", res);
+            setSelectedCategories(res)})
     }, [])
 
     return (
