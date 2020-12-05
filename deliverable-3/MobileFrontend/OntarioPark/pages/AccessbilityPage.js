@@ -1,12 +1,11 @@
-import React, { useContext, useEffect, useState } from 'react'
-import { View, StyleSheet, ScrollView } from 'react-native'
+import React, { useContext } from 'react'
+import { View, StyleSheet } from 'react-native'
 import PageHeader from "../components/Header/PageHeader";
 import { AttractionContext } from '../contexts/AttractionContext'
 import AudioItem from "../components/AudioItem";
 
 /**
- *
- a page for visually impaired users
+ * Page for visually impaired users. Displaying a list view of attractions rather than a map.
  */
 
 const AccessibilityPage = ({ navigation }) => {

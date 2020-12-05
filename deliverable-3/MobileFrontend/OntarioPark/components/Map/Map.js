@@ -2,11 +2,10 @@ import React, { useState, useEffect } from 'react'
 import MapView, { Callout, Marker, PROVIDER_GOOGLE } from 'react-native-maps'
 import { StyleSheet, Text } from 'react-native'
 
+/**
+ * A Map View displaying Marker on locations provided
+ */
 function Map(props) {
-    /**
-     * A Map View displaying Marker on locations provided
-     */
-
     // Creating Markers to be displayed on the user's screen
     const [ markers, setMakers ] = useState([])
     useEffect(() => {

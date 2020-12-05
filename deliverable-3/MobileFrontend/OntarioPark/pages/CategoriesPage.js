@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import {
     View,
     FlatList,
@@ -13,18 +13,18 @@ import {storeCategories, getCategories} from "../localStorage";
 
 const CategoriesPage = ({ navigation }) => {
 
-    const { categories } = useContext(CategoryContext)
+    const { allCategories, selectedCategories, setSelectedCategories } = useContext(CategoryContext)
     const { inAccessibilityMode } = useContext(AccessibilityContext)
     const [selectedCategories, setCategories] = useState([getCategories()])
 
     const addCategory = (category) => {
         selectedCategories.push(category)
-        setCategories(selectedCategories)
+        setSelectedCategories(selectedCategories)
     }
 
     const removeCategory = (removeCategory) => {
         const newCategories = selectedCategories.filter(category => {category !== removeCategory})
-        setCategories(newCategories)
+        setSelectedCategories(newCategories)
     }
 
     const renderGridItem = itemData => {
@@ -42,6 +42,7 @@ const CategoriesPage = ({ navigation }) => {
 
     const finishSelect = () => {
         storeCategories(selectedCategories).then(console.log("stored categories:", selectedCategories))
+
         if (navigation.canGoBack()) {
             navigation.goBack()
         } else {
@@ -59,10 +60,10 @@ const CategoriesPage = ({ navigation }) => {
                 title = "Categories" 
                 handleContinue = {finishSelect}
             />
-            { categories && (
+            { allCategories && (
                 <FlatList
                     keyExtractor={(item) => item["_id"]}
-                    data={categories}
+                    data={allCategories}
                     renderItem={renderGridItem}
                     numColumns={2}
                 />                

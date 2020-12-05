@@ -3,8 +3,7 @@ import React from 'react';
 import { StyleSheet, TouchableOpacity } from 'react-native';
 
 /**
- *
-a user defined button to replace the build in button component
+ * A user defined button to replace the build in button component
  */
 
 function SettingButton(props) {

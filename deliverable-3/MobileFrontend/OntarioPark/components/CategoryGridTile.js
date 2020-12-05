@@ -28,7 +28,11 @@ const CategoryGridTile = props => {
     <View style={styles.gridItem}>
       <TouchableCmp style={{ flex: 1 }} onPress={onSelect}>
         <View
-          style={activate? { ...styles.container, ... { backgroundColor: colors.activate  } } : { ...styles.container, ... { backgroundColor: colors.inactivate } }}
+          style={activate? {
+             ...styles.container, ... { backgroundColor: colors.primary } 
+            } : {
+             ...styles.container, ... { backgroundColor: props.color } 
+            }}
         >
           <Text style={styles.title} numberOfLines={2}>
             {props.title}

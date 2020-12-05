@@ -2,7 +2,6 @@ import React from "react";
 import { View, Text, Image, StyleSheet, ScrollView } from "react-native";
 
 /* A detail page that provides more information about the infrastructure. */
-
 const DetailsPage = ({ navigation, route }) => {
   return (
     <ScrollView>

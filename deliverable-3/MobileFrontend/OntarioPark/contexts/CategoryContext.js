@@ -8,17 +8,19 @@ function CategoryContextProvider(props) {
     /**
      * Context for interacting with server and fetch avaliable categories
      */
-    const [ categories, setCategories ] = useState([])
+    const [ allCategories, setAllCategories ] = useState([])
+    const [ selectedCategories, setSelectedCategories ] = useState([])
 
+    // Fetch all avaliable catagories from the server
     useEffect(() => {
         axios.get(`${backendUrl}/categories`)
             .then(res => {
-                setCategories(res.data.data)
+                setAllCategories(res.data.data)
             })
     }, [])
 
     return (
-        <CategoryContext.Provider value={{categories}}>
+        <CategoryContext.Provider value={{allCategories, selectedCategories, setSelectedCategories}}>
             { props.children }
         </CategoryContext.Provider>
     )

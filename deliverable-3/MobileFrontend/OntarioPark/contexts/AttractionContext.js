@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useContext } from 'react'
 import backendUrl from '../constants/backendUrl'
 import axios from 'axios'
-import { LocationContext } from '../contexts/LocationContext'
+import { LocationContext } from './LocationContext'
+import { CategoryContext } from './CategoryContext'
 
 const AttractionContext = React.createContext()
 
@@ -11,8 +12,9 @@ function AttractionContextProvider(props) {
      */
     const [ attractions, setAttractions ] = useState([])
     const [ park, setPark ] = useState('')
+
     const { location } = useContext(LocationContext)
-    const category = ""
+    const { selectedCategories } = useContext(CategoryContext)
 
     // Returns the attraction with the provided id
     const getAttraction = (id) => {
@@ -39,8 +41,8 @@ function AttractionContextProvider(props) {
     useEffect(() => {
         if (park) {
             let params = { park }
-            if (category) {
-                params.category = category
+            if (selectedCategories) {
+                params.category = selectedCategories.join(',')
             }
 
             axios.get(`${backendUrl}/attractions`, { params })
