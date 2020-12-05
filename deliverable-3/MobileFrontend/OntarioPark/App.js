@@ -16,7 +16,7 @@ import { LocationContextProvider } from "./contexts/LocationContext";
 import { AudioContextProvider } from "./contexts/AudioContext";
 import { CategoryContextProvider } from "./contexts/CategoryContext";
 import { GeofenceContextProvider } from "./contexts/GeofenceContext";
-import {getCategories} from "./localStorage";
+import {getSelectedCategories} from "./localStorage";
 
 const fetchFonts = () => {
   return Font.loadAsync({
