@@ -8,7 +8,7 @@ const storeCategories = async (value) => {
     }
 }
 
-const getCategories = async () => {
+const getSelectedCategories = async () => {
     try {
         const jsonValue = await AsyncStorage.getItem('categories')
         return jsonValue != null ? JSON.parse(jsonValue) : [];
@@ -16,4 +16,4 @@ const getCategories = async () => {
         // error reading value
     }
 }
-export {storeCategories, getCategories}
+export {storeCategories, getSelectedCategories}
