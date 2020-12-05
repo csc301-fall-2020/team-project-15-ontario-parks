@@ -1,6 +1,5 @@
-import Icon from 'react-native-vector-icons/MaterialIcons';
-import React, { useEffect } from 'react';
-import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import React from 'react';
+import {StyleSheet, Text, View} from 'react-native';
 import PlayBackButton from "./PlayBack/PlayBackButton";
 import Card from "../components/Card";
 
@@ -8,7 +7,6 @@ import Card from "../components/Card";
  a component represent for each audio item inside accessibility page
  */
 const AudioItem = props => {
-
     return(
         <PlayBackButton style={{flex: 1}} src = {props.audioSrc}>
             <Card style = {styles.card}>

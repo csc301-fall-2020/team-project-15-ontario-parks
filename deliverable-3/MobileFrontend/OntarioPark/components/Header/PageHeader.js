@@ -1,12 +1,13 @@
-
-/**
- a page header represent the title of the page and a functional button
- */
-import React, { useState } from 'react'
+import React from 'react'
 import { StyleSheet, View } from 'react-native'
 import colors from "../../constants/colors";
 import TitleText from "../TitleText";
 import HeaderButton from "../HeaderButton";
+
+
+/**
+ a page header represent the title of the page and a functional button
+ */
 const PageHeader = props => (
     <View style={styles.header}>
         <View style={styles.backView}>

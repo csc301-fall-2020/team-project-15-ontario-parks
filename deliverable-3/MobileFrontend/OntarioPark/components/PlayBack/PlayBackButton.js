@@ -4,11 +4,10 @@ import { useFocusEffect } from '@react-navigation/native';
 import { StyleSheet, TouchableOpacity } from 'react-native';
 import { AudioContext } from '../../contexts/AudioContext';
 
+/**
+ * A button used to playback audio when pressed
+ */
 function PlayBackButton(props) {
-    /**
-     * A button used to playback audio when pressed
-     */
-    
     //  If the music is playing
     const { isPlaying, setIsPlaying, setAudioUri } = useContext(AudioContext)
     

@@ -2,8 +2,7 @@ import React from "react";
 import {Text, StyleSheet} from "react-native";
 
 /**
- *
-represent the bold text
+ * Represent a bold text
  */
 
 const TitleText = props => (

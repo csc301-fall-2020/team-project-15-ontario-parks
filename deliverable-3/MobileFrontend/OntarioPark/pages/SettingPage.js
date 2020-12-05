@@ -1,6 +1,4 @@
-/**
- * a setting page for the mp application
- */
+
 import React, { useContext } from 'react'
 import { View, Text, StyleSheet, ScrollView } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler';
@@ -8,6 +6,10 @@ import PageHeader from "../components/Header/PageHeader";
 
 import SettingItem from "../components/SettingItem";
 import { AccessibilityContext } from '../contexts/AccessibilityContext';
+
+/**
+ * a setting page for the mp application
+ */
 const SettingPage = ({ navigation }) => {
     const goBack = () => {
         navigation.navigate(inAccessibilityMode ? "Accessibility" : 'Map')

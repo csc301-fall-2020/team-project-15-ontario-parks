@@ -4,6 +4,9 @@ import { LocationContext } from '../contexts/LocationContext'
 import { AttractionContext } from '../contexts/AttractionContext'
 import { AudioContext } from '../contexts/AudioContext'
 
+/**
+ * Hook for applying geofence. Replaced by GeofenceContext.
+ */
 function useGeofence() {
     const { attractions } = useContext(AttractionContext)
     const { location, prevLocation } = useContext(LocationContext)
