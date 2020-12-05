@@ -33,7 +33,6 @@ function MapPage({ navigation }) {
     }, [selected])
 
     useEffect(() =>{
-        console.log(park)
         if (park) {
             setHeaderText(`Welcome to ${park}`)            
         }

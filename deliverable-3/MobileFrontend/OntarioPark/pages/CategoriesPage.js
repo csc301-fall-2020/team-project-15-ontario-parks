@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import {
     View,
     FlatList,
@@ -12,18 +12,17 @@ import { AccessibilityContext } from '../contexts/AccessibilityContext';
 
 const CategoriesPage = ({ navigation }) => {
 
-    const { categories } = useContext(CategoryContext)
+    const { allCategories, selectedCategories, setSelectedCategories } = useContext(CategoryContext)
     const { inAccessibilityMode } = useContext(AccessibilityContext)
-    const [selectedCategories, setCategories] = useState([])
 
     const addCategory = (category) => {
         selectedCategories.push(category)
-        setCategories(selectedCategories)
+        setSelectedCategories(selectedCategories)
     }
 
     const removeCategory = (removeCategory) => {
         const newCategories = selectedCategories.filter(category => {category !== removeCategory})
-        setCategories(newCategories)
+        setSelectedCategories(newCategories)
     }
 
     const renderGridItem = itemData => {
@@ -40,7 +39,6 @@ const CategoriesPage = ({ navigation }) => {
     };
 
     const finishSelect = () => {
-        console.log(1)
         if (navigation.canGoBack()) {
             navigation.goBack()
         } else {
@@ -58,10 +56,10 @@ const CategoriesPage = ({ navigation }) => {
                 title = "Categories" 
                 handleContinue = {finishSelect}
             />
-            { categories && (
+            { allCategories && (
                 <FlatList
                     keyExtractor={(item) => item["_id"]}
-                    data={categories}
+                    data={allCategories}
                     renderItem={renderGridItem}
                     numColumns={2}
                 />                

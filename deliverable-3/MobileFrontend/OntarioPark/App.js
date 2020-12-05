@@ -40,34 +40,34 @@ const App = () => {
   return (
     <SafeAreaProvider> 
       <LocationContextProvider>
-        <AttractionContextProvider>
-          <AccessibilityContextProvider>
-            <AudioContextProvider>
-              <CategoryContextProvider>
-                <GeofenceContextProvider>
-                  <NavigationContainer>
-                    <Stack.Navigator
-                      initialRouteName="Categories"
-                      screenOptions={{
-                        headerShown: false,
-                      }}
-                    >
-                      <Stack.Screen name="Categories" component={CategoriesPage}  />
-                      <Stack.Screen name="Map" component={MapPage} />
-                      <Stack.Screen name="Setting" component={SettingPage} />
-                      <Stack.Screen
-                        name="Details"
-                        component={DetailsPage}
-                        options={{ headerShown: true }}
-                      />
-                      <Stack.Screen name="Accessibility" component={AccessibilityPage} />
-                    </Stack.Navigator>
-                  </NavigationContainer>          
-                </GeofenceContextProvider>
-              </CategoryContextProvider>
-            </AudioContextProvider>
-          </AccessibilityContextProvider>          
-        </AttractionContextProvider>        
+        <CategoryContextProvider>
+          <AttractionContextProvider>
+            <AccessibilityContextProvider>
+              <AudioContextProvider>
+                  <GeofenceContextProvider>
+                    <NavigationContainer>
+                      <Stack.Navigator
+                        initialRouteName="Categories"
+                        screenOptions={{
+                          headerShown: false,
+                        }}
+                      >
+                        <Stack.Screen name="Categories" component={CategoriesPage}  />
+                        <Stack.Screen name="Map" component={MapPage} />
+                        <Stack.Screen name="Setting" component={SettingPage} />
+                        <Stack.Screen
+                          name="Details"
+                          component={DetailsPage}
+                          options={{ headerShown: true }}
+                        />
+                        <Stack.Screen name="Accessibility" component={AccessibilityPage} />
+                      </Stack.Navigator>
+                    </NavigationContainer>          
+                  </GeofenceContextProvider>
+              </AudioContextProvider>
+            </AccessibilityContextProvider>          
+          </AttractionContextProvider>  
+        </CategoryContextProvider>      
       </LocationContextProvider>
     </SafeAreaProvider>
   );

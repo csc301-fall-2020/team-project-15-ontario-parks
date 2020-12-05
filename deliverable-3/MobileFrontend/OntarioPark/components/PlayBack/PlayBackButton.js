@@ -16,7 +16,6 @@ function PlayBackButton(props) {
         if (isPlaying) {
             setIsPlaying(!isPlaying)            
         } else {
-            console.log(props.src)
             setAudioUri(props.src, true)
         }
     };
