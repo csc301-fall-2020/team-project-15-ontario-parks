@@ -1,4 +1,5 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
+
 const storeCategories = async (value) => {
     try {
         const jsonValue = JSON.stringify(value)
