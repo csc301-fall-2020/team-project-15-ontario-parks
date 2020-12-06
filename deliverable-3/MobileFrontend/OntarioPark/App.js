@@ -20,35 +20,16 @@ import {getSelectedCategories} from "./localStorage";
 import axios from "axios";
 import backendUrl from "./constants/backendUrl";
 
-let selectedCategories = undefined
 
-const fetchData = async () => {
-  await Font.loadAsync({
-    "open-sans": require("./assets/fonts/OpenSans-Regular.ttf"),
-    "open-sans-bold": require("./assets/fonts/OpenSans-Bold.ttf"),
-  });
-  await axios.get(`${backendUrl}/categories`)
-  selectedCategories = await getSelectedCategories()
-
-};
-const getInitialRoute = () => {
-  console.log(console.log("selected on app", selectedCategories))
-  if (selectedCategories.length > 0){
-
-    return "Map"
-  }
-  else {
-    return "Categories"
-  }
-}
 const App = () => {
   const [dataLoaded, setDataLoaded] = useState(false);
+  const [ selectedCategories, setSelectedCategories ] = useState([])
   const Stack = createStackNavigator();
 
   if (!dataLoaded) {
     return (
       <AppLoading
-        startAsync={fetchData}
+        startAsync={() => fetchData(setSelectedCategories) }
         onFinish={() => setDataLoaded(true)}
         onError={(err) => console.log(err)}
       />
@@ -64,7 +45,7 @@ const App = () => {
                   <GeofenceContextProvider>
                     <NavigationContainer>
                       <Stack.Navigator
-                        initialRouteName= {getInitialRoute()}
+                        initialRouteName= {getInitialRoute(selectedCategories)}
                         screenOptions={{
                           headerShown: false,
                         }}
@@ -89,5 +70,27 @@ const App = () => {
     </SafeAreaProvider>
   );
 };
+
+
+const fetchData = async (setSelectedCategories) => {
+  await Font.loadAsync({
+    "open-sans": require("./assets/fonts/OpenSans-Regular.ttf"),
+    "open-sans-bold": require("./assets/fonts/OpenSans-Bold.ttf"),
+  });
+  
+  const selectedCategories = await getSelectedCategories()
+  setSelectedCategories(selectedCategories)
+};
+
+
+const getInitialRoute = (selectedCategories) => {
+  console.log(console.log("selected on app", selectedCategories))
+  if (selectedCategories.length > 0){
+    return "Map"
+  }
+  else {
+    return "Categories"
+  }
+}
 
 export default App;
