@@ -17,14 +17,30 @@ import { AudioContextProvider } from "./contexts/AudioContext";
 import { CategoryContextProvider } from "./contexts/CategoryContext";
 import { GeofenceContextProvider } from "./contexts/GeofenceContext";
 import {getSelectedCategories} from "./localStorage";
+import axios from "axios";
+import backendUrl from "./constants/backendUrl";
 
-const fetchFonts = () => {
-  return Font.loadAsync({
+let selectedCategories = undefined
+
+const fetchData = async () => {
+  await Font.loadAsync({
     "open-sans": require("./assets/fonts/OpenSans-Regular.ttf"),
     "open-sans-bold": require("./assets/fonts/OpenSans-Bold.ttf"),
   });
-};
+  await axios.get(`${backendUrl}/categories`)
+  selectedCategories = await getSelectedCategories()
 
+};
+const getInitialRoute = () => {
+  console.log(console.log("selected on app", selectedCategories))
+  if (selectedCategories.length > 0){
+
+    return "Map"
+  }
+  else {
+    return "Categories"
+  }
+}
 const App = () => {
   const [dataLoaded, setDataLoaded] = useState(false);
   const Stack = createStackNavigator();
@@ -32,7 +48,7 @@ const App = () => {
   if (!dataLoaded) {
     return (
       <AppLoading
-        startAsync={fetchFonts}
+        startAsync={fetchData}
         onFinish={() => setDataLoaded(true)}
         onError={(err) => console.log(err)}
       />
@@ -48,7 +64,7 @@ const App = () => {
                   <GeofenceContextProvider>
                     <NavigationContainer>
                       <Stack.Navigator
-                        initialRouteName="Categories"
+                        initialRouteName= {getInitialRoute()}
                         screenOptions={{
                           headerShown: false,
                         }}
