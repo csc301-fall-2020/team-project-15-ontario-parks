@@ -53,7 +53,7 @@ function AttractionContextProvider(props) {
                     console.log(err)
                 })             
         }
-    }, [park])
+    }, [park, selectedCategories])
 
     return (
         <AttractionContext.Provider value={{attractions, getAttraction, park, location}}>
