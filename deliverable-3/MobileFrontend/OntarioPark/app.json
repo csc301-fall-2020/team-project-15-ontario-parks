@@ -4,17 +4,20 @@
   "expo": {
     "name": "Explore Ontario",
     "icon": "./assets/places.png",
+    "splash": {
+      "image": "./assets/splash_icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#171717"
+    },
     "description": "The OntarioPark that create a virtual park map ",
     "slug": "OntarioPark",
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
     ],
-    "splash": {
-      "icon": "./assets/places.png"
-    },
     "android": {
       "package": "com.OntarioParks.ExploreOntario",
+      "permissions": ["ACCESS_FINE_LOCATION","WRITE_EXTERNAL_STORAGE" ,"READ_EXTERNAL_STORAGE"],
       "versionCode": 1,
       "config": {
         "googleMaps": {
