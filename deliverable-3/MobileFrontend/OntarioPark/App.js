@@ -17,8 +17,6 @@ import { AudioContextProvider } from "./contexts/AudioContext";
 import { CategoryContextProvider } from "./contexts/CategoryContext";
 import { GeofenceContextProvider } from "./contexts/GeofenceContext";
 import {getSelectedCategories} from "./localStorage";
-import axios from "axios";
-import backendUrl from "./constants/backendUrl";
 
 
 const App = () => {

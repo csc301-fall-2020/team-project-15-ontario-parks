@@ -1,9 +1,9 @@
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import * as SecureStore from 'expo-secure-store';
 
 const storeCategories = async (value) => {
     try {
         const jsonValue = JSON.stringify(value)
-        await AsyncStorage.setItem('categories', jsonValue)
+        await SecureStore.setItemAsync('ExploreOntario.Categories', jsonValue)
     } catch (e) {
         // saving error
     }
@@ -11,7 +11,7 @@ const storeCategories = async (value) => {
 
 const getSelectedCategories = async () => {
     try {
-        const jsonValue = await AsyncStorage.getItem('categories')
+        const jsonValue = await SecureStore.getItemAsync('ExploreOntario.Categories')
         return jsonValue != null ? JSON.parse(jsonValue) : [];
     } catch(e) {
         // error reading value
