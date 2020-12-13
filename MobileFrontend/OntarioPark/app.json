@@ -1,0 +1,40 @@
+{
+  "name": "Explore Ontario",
+  "displayName": "Explore Ontario",
+  "expo": {
+    "name": "Explore Ontario",
+    "icon": "./assets/places.png",
+    "splash": {
+      "image": "./assets/splash_icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#171717"
+    },
+    "description": "The OntarioPark that create a virtual park map ",
+    "slug": "OntarioPark",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "android": {
+      "package": "com.OntarioParks.ExploreOntario",
+      "permissions": ["ACCESS_FINE_LOCATION","WRITE_EXTERNAL_STORAGE" ,"READ_EXTERNAL_STORAGE"],
+      "versionCode": 1,
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyBcyBilxbGrMSFxznVyvXq3dcYzdb2A5Tk"
+        }
+      }
+    },
+    "ios": {
+      "bundleIdentifier": "com.OntarioParks.ExploreOntario",
+      "buildNumber": "1.0.0",
+      "config": {
+        "googleMapsApiKey": "AIzaSyBcyBilxbGrMSFxznVyvXq3dcYzdb2A5Tk"
+      },
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "This app uses location to provide information about point of interests around the user.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "This app uses location to notify user when they came pass some point of interest"
+      }        
+    }
+  }
+}
