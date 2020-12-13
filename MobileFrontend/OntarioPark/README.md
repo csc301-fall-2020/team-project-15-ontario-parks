@@ -47,39 +47,10 @@ It would open up a page running on http://localhost:19002/ and open up the web p
 
 Scan the QR code on the web page to open up the app on your mobile device.
 
-# Documentations
+## Building And Deploying
 
-### Components
-  * [AudioItem]()
-  * [Card]()
-  * [Category Grid Tile]()
-  * [Category Header]()
-  * [Header Button]()
-  * [Map]()
-  * [Map Header]()
-  * [Page Header]()
-  * [Play Back Button]()
-  * [Setting Button]()
-  * [Setting Item]()
-  * [Switch Button]()
-  * [Title Text]()
-
-### Pages
-  * [Accessibility Page]()
-  * [Categories Page]()
-  * [Detail Page]()
-  * [Map Page]()
-  * [Setting Page]()
-
-### Contexts
-  * [Accessibility Context]()
-  * [Attraction Context]()
-  * [Audio Context]()
-  * [Category Context]()
-  * [Geofence Context]()
-  * [Location Context]()
-
-## Hooks
-  * [useGeofence]()
-  * [usePlayback]()
-
+### For Android
+You can build the application for android by running the command:
+```
+expo build:android
+```
