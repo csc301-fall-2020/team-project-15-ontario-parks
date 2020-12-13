@@ -11,7 +11,6 @@ To simplify the limit the scope of our problem statement, we focus on providing 
 ## Key Features
 **By visiting the url https://drive.google.com/file/d/1htnVTtw6O20NylVkSgba7o0jAmRWtjU2/view, you can see a demo video of the application**
 
-- Frontend:
    
   - Select the category of interests that will display on the map <br/>
    
