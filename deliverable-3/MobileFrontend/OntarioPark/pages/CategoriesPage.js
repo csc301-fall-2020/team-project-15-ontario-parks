@@ -4,8 +4,7 @@ import {
     FlatList,
     StyleSheet,
 } from 'react-native';
-import CategoryGridTile from '../components/CategoryGridTile';
-import colors from "../constants/colors";
+import CategoryGridTile from '../components/Item/CategoryGridTile';
 import CategoryHeader from "../components/Header/CategoryHeader";
 import { CategoryContext } from '../contexts/CategoryContext';
 import { AccessibilityContext } from '../contexts/AccessibilityContext';

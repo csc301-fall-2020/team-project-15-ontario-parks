@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { View, StyleSheet } from 'react-native'
 import PageHeader from "../components/Header/PageHeader";
 import { AttractionContext } from '../contexts/AttractionContext'
-import AudioItem from "../components/AudioItem";
+import AudioItem from "../components/Item/AudioItem";
 
 /**
  * Page for visually impaired users. Displaying a list view of attractions rather than a map.

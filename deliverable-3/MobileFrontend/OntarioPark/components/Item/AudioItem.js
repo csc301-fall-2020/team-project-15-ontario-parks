@@ -1,7 +1,7 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-import PlayBackButton from "./PlayBack/PlayBackButton";
-import Card from "../components/Card";
+import PlayBackButton from "../Button/PlayBackButton";
+import Card from "./Card";
 
 /**
  a component represent for each audio item inside accessibility page

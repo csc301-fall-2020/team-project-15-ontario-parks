@@ -1,8 +1,8 @@
 import React from 'react'
 import { StyleSheet, View } from 'react-native'
 import colors from "../../constants/colors";
-import TitleText from "../TitleText";
-import HeaderButton from "../HeaderButton";
+import TitleText from "../Text/TitleText";
+import HeaderButton from "../Button/HeaderButton";
 
 
 /**

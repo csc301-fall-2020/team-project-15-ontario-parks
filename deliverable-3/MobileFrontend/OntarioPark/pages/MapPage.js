@@ -2,8 +2,8 @@ import React, { useContext, useEffect, useState } from 'react'
 import { View, StyleSheet } from 'react-native'
 import MapHeader from '../components/Header/MapHeader'
 import Map from '../components/Map/Map'
-import PlayBackButton from '../components/PlayBack/PlayBackButton'
-import SettingButton from '../components/SettingButton/SettingButton'
+import PlayBackButton from '../components/Button/PlayBackButton'
+import SettingButton from '../components/Button/SettingButton'
 import { AttractionContext } from '../contexts/AttractionContext'
 
 function MapPage({ navigation }) {

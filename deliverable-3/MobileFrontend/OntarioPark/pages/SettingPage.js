@@ -4,7 +4,7 @@ import { View, Text, StyleSheet, ScrollView } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import PageHeader from "../components/Header/PageHeader";
 
-import SettingItem from "../components/SettingItem";
+import SettingItem from "../components/Item/SettingItem";
 import { AccessibilityContext } from '../contexts/AccessibilityContext';
 
 /**

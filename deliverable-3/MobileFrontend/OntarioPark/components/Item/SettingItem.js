@@ -1,6 +1,6 @@
 import React from "react";
 import {View, StyleSheet, Text} from "react-native";
-import SwitchButton from "./SwitchButton";
+import SwitchButton from "../Button/SwitchButton";
 
 /**
  * A setting line represent each setting component in setting page
