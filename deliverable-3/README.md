@@ -9,26 +9,35 @@ Imagine walking in a part and seeing a beautiful plant or am amazing architectur
 To simplify the limit the scope of our problem statement, we focus on providing natural, cultural, and historical information in High Park.
 
 ## Key Features
+**By visiting the url https://drive.google.com/file/d/1htnVTtw6O20NylVkSgba7o0jAmRWtjU2/view, you can see a demo video of the application**
 
 - Frontend:
-
-  - Displays points of interests and allows user to choose between them by clicking the markers <br />
-    ![](./demo/ChoosePoint.gif)
+   
+  - Select the category of interests that will display on the map <br/>
+   
+  - Display points of interests and allows user to choose between them by clicking the markers <br />
+    
   - Provides more knowledge by having a detail page <br />
-    ![](./demo/DetailPage.gif)
+    
   - Having a interactive map that allows user to see different part of the park as well as location of infrastructures <br />
-    ![](./demo/Map.gif)
+    
   - Plays audio of the location by clicking play after choosing the marker you want to hear about <br />
-    ![](./demo/PlayAudio.gif)
+    
   - Access accessibility mode through a choice in the setting <br />
-    ![](./demo/Accessibility.gif)
+  Change display of attractions/interests in map into a list of attraction title, user can still play the audio by clicking on a certain title.
+  (it's people with vision disability)
+  
+  - embedded GPS position <br/>
+  Application can dynamically display the closest Park map available in the database to the user.
+  
+  - auto play audio when getting close to an interest <br/>
+  The Audio will play by default the GPS location of user get closed to a certain interest.
+  
+  - local Storage <br/>
+  Only load select category page at first when user first open the app
+  after that the category will get stored inside local storage and from then on, the first page shown in the app will be the map page
+  
 
-- Backend:
-  - By visiting the url https://ontario-park.herokuapp.com/api/attractions, users can retrive the following information
-    - Getting a list of all the tourist attractions
-    - The longitude and latitude of each of the tourist attractions
-    - A description of each of the tourist attractions
-    - A url to the audio file and the image file of each of the tourist attractions
 
 ## Instructions
 
