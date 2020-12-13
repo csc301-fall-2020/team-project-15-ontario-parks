@@ -9,7 +9,7 @@ Imagine walking in a part and seeing a beautiful plant or am amazing architectur
 To simplify the limit the scope of our problem statement, we focus on providing natural, cultural, and historical information in High Park.
 
 ## Key Features
-**By visiting the url https://drive.google.com/file/d/1htnVTtw6O20NylVkSgba7o0jAmRWtjU2/view, you can see a demo video of the application**
+**By visiting the url https://youtu.be/Zig9Qi-Ne1A, you can see a demo video of the application**
 
    
   - Select the category of interests that will display on the map <br/>
