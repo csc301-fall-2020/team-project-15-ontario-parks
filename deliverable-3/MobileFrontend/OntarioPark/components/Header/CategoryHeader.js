@@ -4,6 +4,10 @@ import colors from "../../constants/colors";
 import TitleText from "../Text/TitleText";
 import HeaderButton from "../Button/HeaderButton";
 
+/**
+ * Header for category page.
+ * Transition to the proper page after clicking continue.
+*/
 const CategoryHeader = (props) => {
     return(
         <View style={styles.header}>

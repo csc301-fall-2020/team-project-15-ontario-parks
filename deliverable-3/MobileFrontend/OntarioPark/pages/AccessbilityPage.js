@@ -4,11 +4,10 @@ import PageHeader from "../components/Header/PageHeader";
 import { AttractionContext } from '../contexts/AttractionContext'
 import AudioItem from "../components/Item/AudioItem";
 
-/**
- * Page for visually impaired users. Displaying a list view of attractions rather than a map.
- */
-
 const AccessibilityPage = ({ navigation }) => {
+    /**
+     * Page for visually impaired users. Displaying a list view of attractions rather than a map.
+     */
     const { attractions, getAttraction} = useContext(AttractionContext)
     const goToSetting = () => {
         navigation.navigate('Setting')

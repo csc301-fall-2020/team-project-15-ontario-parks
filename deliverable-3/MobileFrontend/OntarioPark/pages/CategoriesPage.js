@@ -11,7 +11,9 @@ import { AccessibilityContext } from '../contexts/AccessibilityContext';
 import {storeCategories} from "../localStorage";
 
 const CategoriesPage = ({ navigation }) => {
-
+    /**
+     * Page for displaying and allowing user to select category that they are interested in.
+    */
     const { allCategories, selectedCategories, setSelectedCategories } = useContext(CategoryContext)
     const { inAccessibilityMode } = useContext(AccessibilityContext)
     const addCategory = (category) => {

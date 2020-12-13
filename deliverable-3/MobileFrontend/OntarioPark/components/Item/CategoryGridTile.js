@@ -9,6 +9,10 @@ import {
 } from 'react-native';
 import colors from "../../constants/colors";
 
+/**
+ * A tile that represents a category.
+ * Click the tile to select/deselect the category.
+ */
 const CategoryGridTile = props => {
     let TouchableCmp = TouchableOpacity;
     if (Platform.OS === 'android' && Platform.Version >= 21) {

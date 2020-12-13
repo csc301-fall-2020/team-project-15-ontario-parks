@@ -2,11 +2,10 @@ import { Audio } from 'expo-av';
 import { INTERRUPTION_MODE_ANDROID_DO_NOT_MIX, INTERRUPTION_MODE_IOS_DO_NOT_MIX } from 'expo-av/build/Audio';
 import { useEffect, useState } from 'react';
 
-
+/**
+ * Custom hook for audio playback
+ */
 function usePlayBack(src) {
-    /**
-     * Custom hook for audio playback
-     */
     Audio.setAudioModeAsync({
         allowsRecordingIOS: false,
         staysActiveInBackground: true,

@@ -16,7 +16,7 @@ import { LocationContextProvider } from "./contexts/LocationContext";
 import { AudioContextProvider } from "./contexts/AudioContext";
 import { CategoryContextProvider } from "./contexts/CategoryContext";
 import { GeofenceContextProvider } from "./contexts/GeofenceContext";
-import {getSelectedCategories} from "./localStorage";
+import { getSelectedCategories } from "./localStorage";
 
 
 const App = () => {

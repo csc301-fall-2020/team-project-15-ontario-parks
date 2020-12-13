@@ -3,10 +3,10 @@ import { StyleSheet, View } from 'react-native'
 import { Text } from 'react-native-elements'
 import { SafeAreaInsetsContext } from 'react-native-safe-area-context'
 
+/**
+ * Header for map page. Displays the string in prop text.
+ */
 function MapHeader(props) {
-    /**
-     * Header for map page. Displays the string in prop text.
-     */
     const { top } = useContext(SafeAreaInsetsContext)
 
     return(
