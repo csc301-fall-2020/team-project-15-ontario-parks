@@ -40,10 +40,14 @@ To simplify the limit the scope of our problem statement, we focus on providing 
 
 ## Instructions
 
-The backend application is hosted on heroku and we currently have one route (get all tourist attractions) that is functioning. If users are interested in accessing the API of our application, they can simply visit https://ontario-park.herokuapp.com/api/attractions.
+An APK file called ExploreOntario.apk has already been generated and placed in the directory for you to load on an Android device.
 
-An APK file called Phase-2.apk has already been generated and placed at the deliverable-2 directory for you to load on an Android device.
+### Categoroy Page
+- click on correspond category button to make the category selected (green implies it is active)
 
+- click on the category again will deactivate this category (grey implies it is inactive)
+
+- click *continue* to confirm the selection of categories and continue to the next page
 ### Map Page (Home page)
 
 - No registrations are needed.
@@ -94,6 +98,11 @@ An APK file called Phase-2.apk has already been generated and placed at the deli
 - Click on the back button on the top-left of the setting page.
 - If accessibility mode is disabled, this takes you back to the map page.
 - If accessibility mode is enabled, this takes you to the accessibility page.
+
+#### Go to Category
+- Click on the *Select Category* on the button of the setting page.<br/>
+it will go to the category page and let user reselect the categories.
+
 
 ### Accessibility Mode
 
