@@ -1,8 +1,8 @@
-# Ontario Park
+# Explore Ontario
 
 ## Description
 
-Ontario Park is a geo-audio and realtime-locating mobile application that provides natural, cultural, and historical information and anomalies of Ontario parks based users’ interest. Our application aims to solve the problem of a lack of access of information of your surrounding when you are walking in parks.
+Explore Ontario is a geo-audio and realtime-locating mobile application that provides natural, cultural, and historical information and anomalies of parks based users’ interest. Our application aims to solve the problem of a lack of access of information of your surrounding when you are walking in parks.
 
 Imagine walking in a part and seeing a beautiful plant or am amazing architecture but you have no resource to learn about what is that beautiful plant or what is the background story of that amazing architecture. Our application will provide you with that information as you are walking in the park!
 
